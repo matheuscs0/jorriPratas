@@ -1,0 +1,77 @@
+.cardProduct{
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 296.5px;
+  height: 563.47px;
+  overflow: hidden;
+  background-color: #d1d2d377;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.cardProduct img{
+  display: flex;
+  width: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  margin-bottom: 3rem;
+}
+.cardProduct h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  max-width: 280px;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+.cardProduct p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 2rem;
+  color: #333333;
+}
+.cardProduct button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 30px;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #333333;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 0 auto;
+}
+.productContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.cardProduct a{
+  text-decoration: none;
+}
+.cardProduct button:hover{
+  background-color: #333333;
+  color: aliceblue;
+  transition: 0.35s ease-in-out;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+  transition: 0.5s ease-in-out;
+}
+.cardProduct:hover{
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+  transition: 0.5s ease-in-out;
+}

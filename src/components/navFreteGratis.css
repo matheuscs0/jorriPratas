@@ -1,0 +1,28 @@
+.navSpam{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: black;
+  color: aliceblue;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navSpam div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navSpam p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.navSpam spam{
+  color: rgb(238, 3, 3);
+  margin-right: 3px;
+}

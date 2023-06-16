@@ -1,0 +1,42 @@
+.formSearch{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.formSearch input{
+  display: flex;
+  width: 300px;
+  height: 35px;
+  border: none;
+  padding: 1rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.507);
+  border-radius: 10px;
+  outline: none;
+}
+.formSearch button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.formSearch button svg{
+  display: flex;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+}
+.formSearch button:hover{
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+.formSearch input:focus{
+  background-color: #fdfdfdd3;
+  transition: 0.5s ease-in-out;
+}

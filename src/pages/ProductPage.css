@@ -1,0 +1,21 @@
+.gridProduct {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.cardProduct{
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 296.5px;
+  height: 563.47px;
+  overflow: hidden;
+  background-color: #d1d2d377;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}

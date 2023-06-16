@@ -1,0 +1,32 @@
+.DropdownContainer{
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.DropdownLi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 3rem;
+  position: relative;
+}
+.DropdownLi a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #333333;
+  font-weight: 700;
+  border-right: 1px solid #33333373; 
+  padding-right:40px;
+}
+.DropdownLi li{
+  transition: transform 500ms;
+}
+.DropdownLi li:hover{
+  transform: scale(1.1);
+}
+
+
