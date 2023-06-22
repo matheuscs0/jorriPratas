@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import './ProductPage.css'
-import Colar from '../components/Colar'
-import Pulseiras from '../components/Pulseiras'
-import Tornozeleiras from '../components/Tornozeleira'
+import Colar from "../components/Catalogos/Colar";
+import Pulseiras from "../components/Catalogos/Pulseiras";
+import Tornozeleira from '../components/Catalogos/Tornozeleira' 
 import DropdownMenu from "../components/DropdownMenu";
 import NavFreteGratis from "../components/navFreteGratis";
 import NavBar from "../components/NavBar";
@@ -14,11 +14,11 @@ const ProductPage = () => {
   const renderProducts = () => {
     switch (type) {
       case "colares":
-        return <Colar/>;
+        return <Colar/>
       case "pulseiras":
         return <Pulseiras/>;
       case "tornozeleiras":
-        return <Tornozeleiras/>;
+        return <Tornozeleira/>;
       default:
         return null;
     }

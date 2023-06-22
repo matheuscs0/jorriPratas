@@ -1,4 +1,6 @@
-import ProductCard from './ProductCard';
+import ProductCard from '../ProductCard';
+import {Swiper, SwiperSlide} from 'swiper/react'
+import '../ProductCard.css'
 
 const Colar = () => {
 
@@ -156,8 +158,11 @@ const Colar = () => {
   return (
     <div className='productContainer'>
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        
+            <ProductCard key={product.id} product={product} className="slide-item" />
+        
       ))}
+  
     </div>
   );
 };
