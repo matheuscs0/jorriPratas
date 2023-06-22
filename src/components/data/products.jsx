@@ -61,6 +61,7 @@ const products = [
     foto_about1: "../public/imgs/PontoDeLuz/colar_pontoLuz.jpg",
     title: "COLAR DE PRATA PONTO DE LUZ",
     disponivel: "sim",
+    price: "R$ 44,00",
     sizes: [
       { size: "Padrão", price: "R$ 44,00" },
     ],
@@ -71,6 +72,7 @@ const products = [
     foto_about1: "../public/imgs/ColeçãoPraia/colar_concha.jpg",
     title: "COLAR DE PRATA CONCHA",
     disponivel: "sim",
+    price: "R$ 77,00",
     sizes: [
       { size: "Padrão", price: "R$ 77,00" },
     ],
@@ -81,6 +83,7 @@ const products = [
     foto_about1: "../public/imgs/ColeçãoPraia/colar_golfinho.jpg",
     title: "COLAR DE PRATA GOLFINHO",
     disponivel: "sim",
+    price: "R$ 59,00",
     sizes: [
       { size: "Padrão", price: "R$ 59,00" },
     ],
@@ -91,6 +94,7 @@ const products = [
     foto_about1: "../public/imgs/ColeçãoPraia/colar_ondas.jpg",
     title: "COLAR DE PRATA ONDA",
     disponivel: "sim",
+    price: "R$ 77,00",
     sizes: [
       { size: "Padrão", price: "R$ 77,00" },
     ],
@@ -101,6 +105,7 @@ const products = [
     foto_about1: "../public/imgs/ColeçãoPraia/colar_conchaAberto.jpg",
     title: "COLAR DE PRATA CONCHA ABERTO",
     disponivel: "sim",
+    price: "R$ 77,00",
     sizes: [
       { size: "Padrão", price: "R$ 77,00" },
     ],
@@ -111,6 +116,7 @@ const products = [
     foto_about1: "../public/imgs/ColeçãoPraia/colar_estrelaCravejada.jpg",
     title: "COLAR DE PRATA ESTRELA CRAVEJADA ZIRCÔNIA",
     disponivel: "sim",
+    price: "R$ 147,00",
     sizes: [
       { size: "40cm", price: "R$ 147,00" },
       { size: "45cm", price: "R$ 149,00" },
@@ -124,6 +130,7 @@ const products = [
     foto_about3: "../public/imgs/Veneziana/colar_veneziana4",
     title: "COLAR DE PRATA VENEZIANA",
     disponivel: "sim",
+    price: "R$ 77,00",
     sizes: [
       { size: "Padrão", price: "R$ 77,00" },
     ],
@@ -134,6 +141,7 @@ const products = [
     foto_about1: "../public/imgs/Zirconia/colar_pedraZirconia.jpg",
     title: "COLAR DE PRATA PEDRAS ZIRCÔNIA",
     disponivel: "sim",
+    price: "R$ 89,80",
     sizes: [
       { size: "Padrão", price: "R$ 89,90" },
     ],
@@ -144,6 +152,7 @@ const products = [
     foto_about1: "../public/imgs/PerolaBarroca/colar_perolaBarroca.jpeg",
     title: "COLAR DE PÉROLA BARROCA",
     disponivel: "sim",
+    price: "R$ 119,00",
     sizes: [
       { size: "40cm", price: "R$ 119,00" },
       { size: "45cm", price: "R$ 124,00" },
