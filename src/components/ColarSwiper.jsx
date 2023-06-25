@@ -1,7 +1,27 @@
-import ProductCard from '../ProductCard';
-import '../ProductCard.css'
+import { Swiper, SwiperSlide} from 'swiper/react'
+import './Swiper.css'
+import { useState, useEffect } from 'react'
+import 'swiper/css/swiper.css'
 
-const Colar = () => {
+const ColarSwiper = () => {
+  const [slidesPerView, setSlidePerView] = useState(4.7)
+  useEffect(() => {
+    function handleResize(){
+      if(window.innerWidth < 1440){
+        setSlidePerView(2)
+      } if(window.innerWidth < 720){
+        setSlidePerView(1)
+      } else{
+        setSlidePerView(4.7)
+      }
+    }
+    handleResize()
+
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  },[])
 
   const products = [
     {
@@ -155,15 +175,27 @@ const Colar = () => {
     },
   ];
   return (
-    <div className='productContainer'>
-      {products.map((product) => (
-        
-            <ProductCard key={product.id} product={product} className="slide-item" />
-        
-      ))}
-  
+    <div className='rowContainer'>
+      <Swiper
+      slidesPerView={slidesPerView}
+
+      spaceBetween={50}
+      scrollbar={{ draggable: true }}
+      navigation
+      >
+        {products.map((product) => (
+          <SwiperSlide key={product.id} className='swiperSlide'>
+            <div className='cardProduct'>
+              <img src={product.poster_path} alt={product.title} />
+              <h2>{product.title}</h2>
+              <p>{product.price}</p>
+              <button>VER DETALHES</button>
+            </div>
+          </SwiperSlide>
+         ))}
+      </Swiper>
     </div>
   );
 };
 
-export default Colar
+export default ColarSwiper

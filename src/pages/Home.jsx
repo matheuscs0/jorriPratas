@@ -1,4 +1,5 @@
 
+import ColarSwiper from '../components/ColarSwiper'
 import DropdownMenu from '../components/DropdownMenu'
 import NavBar from '../components/NavBar'
 import FooterDetails from '../components/footerDetails'
@@ -10,6 +11,7 @@ const Home = () => {
         <NavFreteGratis/>
         <NavBar/>
         <DropdownMenu/>
+        <ColarSwiper/>
         <FooterDetails/>
     </div>
     

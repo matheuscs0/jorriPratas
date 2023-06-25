@@ -1,0 +1,19 @@
+.rowContainer{
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  
+}
+.swiperSlide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.rowContainer .swiper-button-next::after,
+.rowContainer .swiper-button-prev::after {
+  color: #333;
+}
