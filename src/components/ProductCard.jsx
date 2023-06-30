@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './ProductCard.css'
+import './css/ProductCard.css'
 
 const ProductCard = ({ product }) => {
   return (
@@ -7,7 +7,7 @@ const ProductCard = ({ product }) => {
       <Link to={`/product/${product.id}`}>
         <img src={product.poster_path} alt={product.title} />
         <h2>{product.title}</h2>
-        <p>{product.price}</p>
+        <p>R$ {product.price}</p>
         <button>VER DETALHES</button>
       </Link>
     </div>

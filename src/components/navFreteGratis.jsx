@@ -1,4 +1,4 @@
-import './navFreteGratis.css'
+import './css/navFreteGratis.css'
 
 const NavFreteGratis = () => {
   return (

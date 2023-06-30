@@ -8,12 +8,12 @@ const products = [
     foto_about4: "../public/imgs/Coração/colar_coracao60cm.jpeg",
     title: "COLAR DE PRATA ELO CORAÇÃO",
     disponivel: "sim",
-    price: "R$ 95,90",
+    price: "95.90",
     sizes: [
-      { size: "40cm", price: "R$ 95,90" },
-      { size: "45cm", price: "R$ 97,90" },
-      { size: "50cm", price: "R$ 101,90" },
-      { size: "60cm", price: "R$ 111,90" },
+      { size: "40cm", price: "95.90" },
+      { size: "45cm", price: "97.90" },
+      { size: "50cm", price: "101.90" },
+      { size: "60cm", price: "111.90" },
     ],
   },
   {
@@ -22,11 +22,11 @@ const products = [
     foto_about1: "../public/imgs/Singapura/colar_singapura.jpg",
     title: "COLAR DE PRATA SINGAPURA",
     disponivel: "sim",
-    price: "R$ 84,90",
+    price: "84.90",
     sizes: [
-      { size: "40cm", price: "R$ 84,90" },
-      { size: "45cm", price: "R$ 87,90" },
-      { size: "50cm", price: "R$ 94,90" },
+      { size: "40cm", price: "84.90" },
+      { size: "45cm", price: "87.90" },
+      { size: "50cm", price: "94.90" },
     ],
   },
   {
@@ -38,11 +38,11 @@ const products = [
     foto_about4: "../public/imgs/Bolinha/colar_bolinha4.jpg",
     title: "COLAR DE PRATA BOLINHA",
     disponivel: "sim",
-    price: "R$ 79,90" ,
+    price: "79.90" ,
     sizes: [
-      { size: "40cm", price: "R$ 79,90" },
-      { size: "45cm", price: "R$ 84,90" },
-      { size: "60cm", price: "R$ 110,90" },
+      { size: "40cm", price: "79.90" },
+      { size: "45cm", price: "84.90" },
+      { size: "60cm", price: "110.90" },
     ],
   },
   {
@@ -50,9 +50,9 @@ const products = [
     poster_path: "../public/imgs/Bolinha/pulseira_BolinhaCoracao.jpeg",
     title: "PULSEIRA DE PRATA BOLINHA CORAÇÃO",
     disponivel: "sim",
-    price: "R$54,90",
+    price: "54.90",
     sizes: [
-      { size: "Padrão", price: "R$ 54,90" },
+      { size: "Padrão", price: "54.90" },
     ],
   },
   {
@@ -61,9 +61,9 @@ const products = [
     foto_about1: "../public/imgs/PontoDeLuz/colar_pontoLuz.jpg",
     title: "COLAR DE PRATA PONTO DE LUZ",
     disponivel: "sim",
-    price: "R$ 44,00",
+    price: "44.00",
     sizes: [
-      { size: "Padrão", price: "R$ 44,00" },
+      { size: "Padrão", price: "44.00" },
     ],
   },
   {
@@ -72,9 +72,9 @@ const products = [
     foto_about1: "../public/imgs/ColeçãoPraia/colar_concha.jpg",
     title: "COLAR DE PRATA CONCHA",
     disponivel: "sim",
-    price: "R$ 77,00",
+    price: "77.00",
     sizes: [
-      { size: "Padrão", price: "R$ 77,00" },
+      { size: "Padrão", price: "77.00" },
     ],
   },
   {
@@ -83,9 +83,9 @@ const products = [
     foto_about1: "../public/imgs/ColeçãoPraia/colar_golfinho.jpg",
     title: "COLAR DE PRATA GOLFINHO",
     disponivel: "sim",
-    price: "R$ 59,00",
+    price: "59.00",
     sizes: [
-      { size: "Padrão", price: "R$ 59,00" },
+      { size: "Padrão", price: "59.00" },
     ],
   },
   {
@@ -94,9 +94,9 @@ const products = [
     foto_about1: "../public/imgs/ColeçãoPraia/colar_ondas.jpg",
     title: "COLAR DE PRATA ONDA",
     disponivel: "sim",
-    price: "R$ 77,00",
+    price: "77.00",
     sizes: [
-      { size: "Padrão", price: "R$ 77,00" },
+      { size: "Padrão", price: "77.00" },
     ],
   },
   {
@@ -105,9 +105,9 @@ const products = [
     foto_about1: "../public/imgs/ColeçãoPraia/colar_conchaAberto.jpg",
     title: "COLAR DE PRATA CONCHA ABERTO",
     disponivel: "sim",
-    price: "R$ 77,00",
+    price: "77.00",
     sizes: [
-      { size: "Padrão", price: "R$ 77,00" },
+      { size: "Padrão", price: "77.00" },
     ],
   },
   {
@@ -116,10 +116,10 @@ const products = [
     foto_about1: "../public/imgs/ColeçãoPraia/colar_estrelaCravejada.jpg",
     title: "COLAR DE PRATA ESTRELA CRAVEJADA ZIRCÔNIA",
     disponivel: "sim",
-    price: "R$ 147,00",
+    price: "147.00",
     sizes: [
-      { size: "40cm", price: "R$ 147,00" },
-      { size: "45cm", price: "R$ 149,00" },
+      { size: "40cm", price: "147.00" },
+      { size: "45cm", price: "149.00" },
     ],
   },
   {
@@ -130,9 +130,9 @@ const products = [
     foto_about3: "../public/imgs/Veneziana/colar_veneziana4",
     title: "COLAR DE PRATA VENEZIANA",
     disponivel: "sim",
-    price: "R$ 77,00",
+    price: "77.00",
     sizes: [
-      { size: "Padrão", price: "R$ 77,00" },
+      { size: "Padrão", price: "77.00" },
     ],
   },
   {
@@ -141,9 +141,9 @@ const products = [
     foto_about1: "../public/imgs/Zirconia/colar_pedraZirconia.jpg",
     title: "COLAR DE PRATA PEDRAS ZIRCÔNIA",
     disponivel: "sim",
-    price: "R$ 89,80",
+    price: "89.80",
     sizes: [
-      { size: "Padrão", price: "R$ 89,90" },
+      { size: "Padrão", price: "89.90" },
     ],
   },
   {
@@ -152,10 +152,10 @@ const products = [
     foto_about1: "../public/imgs/PerolaBarroca/colar_perolaBarroca.jpeg",
     title: "COLAR DE PÉROLA BARROCA",
     disponivel: "sim",
-    price: "R$ 119,00",
+    price: "119.00",
     sizes: [
-      { size: "40cm", price: "R$ 119,00" },
-      { size: "45cm", price: "R$ 124,00" },
+      { size: "40cm", price: "119.00" },
+      { size: "45cm", price: "124.00" },
     ],
   },
   {
@@ -166,9 +166,9 @@ const products = [
     foto_about3: "../public/imgs/",
     title: "PULSEIRA DE PRATA ELO CORAÇÃO",
     disponivel: "sim",
-    price: "R$ 54,90",
+    price: "54.90",
     sizes: [
-      { size: "Padrão", price: "R$ 54,90" },
+      { size: "Padrão", price: "54.90" },
     ],
   },
   {
@@ -179,9 +179,9 @@ const products = [
     foto_about3: "../public/imgs/",
     title: "PULSEIRA DE PRATA SINGAPURA",
     disponivel: "sim",
-    price: "R$54,90",
+    price: "54.90",
     sizes: [
-      { size: "Padrão", price: "R$ 54,90" },
+      { size: "Padrão", price: "54.90" },
     ],
   },
   {

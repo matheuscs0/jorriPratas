@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './SearchInput.css'
+import './css/SearchInput.css'
 import {Ri24HoursLine, RiSearch2Line} from 'react-icons/ri'
 
 const SearchInput = () => {

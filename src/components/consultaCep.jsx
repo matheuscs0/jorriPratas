@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './consultaCep.css'
+import './css/consultaCep.css'
 
 const CepSearch = () => {
   const [cep, setCep] = useState('');

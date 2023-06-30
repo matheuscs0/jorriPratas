@@ -6,7 +6,7 @@
 }
 .formSearch input{
   display: flex;
-  width: 300px;
+  max-width: 350px;
   height: 35px;
   border: none;
   padding: 1rem;

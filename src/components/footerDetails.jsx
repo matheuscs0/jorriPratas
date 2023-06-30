@@ -1,7 +1,7 @@
 import { BsCreditCardFill } from 'react-icons/bs' 
 import { GiReturnArrow } from 'react-icons/gi'
 import {ImTruck} from 'react-icons/im'
-import './footerDetails.css'
+import './css/footerDetails.css'
 
 const FooterDetails = () => {
   return (

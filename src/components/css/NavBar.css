@@ -19,30 +19,11 @@
   max-width: 250px;
   padding: 10px;
 }
-.inputs{
+.inputSearch{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-}
-.inputs input{
-  display: flex;
-  justify-content: center;
-  align-items: center ;
-  border: none;
-  border-radius: 10px;
-  width: 25rem;
-  height:40px;
-  background-color: #ffffff;
-}
-.inputs button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+  max-width: 400px;
 }
 .svgs{
   display:flex ;
@@ -55,4 +36,5 @@
   color: #ffffff;
   width:30px;
   height:30px;
+  cursor: pointer;
 }
