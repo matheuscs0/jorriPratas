@@ -15,7 +15,7 @@ const DetailsCard = ({ product, onAddToCart }) => {
 
   const handleAddToCart = () => {
     const item = { ...product, size: selectedSize };
-    onAddToCart(item); // Chame a função onAddToCart passando o item como argumento
+    onAddToCart(item); 
   };
   
   return (

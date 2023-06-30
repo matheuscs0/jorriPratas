@@ -37,16 +37,16 @@ const ProductDetail = () => {
 
   const addToCart = (item) => {
     setCartItems((prevItems) => [...prevItems, item]);
-    handleOpenSidebar(); // Chame a função handleOpenSidebar ao adicionar um item ao carrinho
+    handleOpenSidebar(); 
   };
 
   const handleCloseSidebar = () => {
-    setShowSidebar(false); // Define o estado para ocultar a sidebar
+    setShowSidebar(false); 
   };
 
   const handleOpenSidebar = () => {
     if (cartItems.length > 0) {
-      setShowSidebar(true); // Define o estado para exibir a sidebar apenas se houver itens no carrinho
+      setShowSidebar(true); 
     }
   };
 

@@ -18,7 +18,7 @@ const NavBar = ({ onLoginClick, onOpenSidebar, onClose }) => {
 
   const handleClick = () => {
     setShowSidebar(true);
-    onOpenSidebar(); // Chame a função onOpenSidebar quando o ícone do carrinho for clicado
+    onOpenSidebar(); 
   };
 
   const handleCloseSidebar = () => {
@@ -37,7 +37,7 @@ const NavBar = ({ onLoginClick, onOpenSidebar, onClose }) => {
       </div>
       <div className="svgs">
         <VscAccount onClick={onLoginClick} />
-        <HiShoppingBag onClick={handleClick}/> {/* Adicione o evento de clique onClick */}
+        <HiShoppingBag onClick={handleClick}/> 
       </div>
       {showSidebar && (
         <div className="sidebar">
