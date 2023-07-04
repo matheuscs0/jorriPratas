@@ -5,7 +5,6 @@ import { HiShoppingBag } from 'react-icons/hi';
 import './css/NavBar.css'
 import SearchInput from './SearchInput';
 import CarrinhoDeCompras from './CarrinhoDeCompras';
-import FinalizarCompra from '../pages/CardResume';
 import './css/CarrinhoDeCompras.css'
 import { useEffect } from 'react';
 
