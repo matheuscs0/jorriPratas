@@ -7,6 +7,7 @@ import NavFreteGratis from '../components/navFreteGratis';
 import NavBar from '../components/NavBar';
 import LoginModal from '../components/LoginModal';
 import CarrinhoDeCompras from '../components/CarrinhoDeCompras.jsx';
+import Cookies from 'js-cookie';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -15,17 +16,27 @@ const ProductDetail = () => {
   const [cartItems, setCartItems] = useState([]);
   const [showSidebar, setShowSidebar] = useState(false);
 
-
   useEffect(() => {
-    const storedCartItems = localStorage.getItem('cartItems');
+    const storedCartItems = Cookies.get('cartItems');
     if (storedCartItems) {
-      setCartItems(JSON.parse(storedCartItems));
+      const parsedCartItems = JSON.parse(storedCartItems);
+      if (parsedCartItems.length > 0) {
+        setCartItems(parsedCartItems);
+      }
     }
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  }, [cartItems]);
+  const addToCart = (item) => {
+    const newItems = [...cartItems, item];
+    setCartItems(newItems);
+    Cookies.set('cartItems', JSON.stringify(newItems), { expires: 7 });
+  };
+
+  const handleRemoveFromCart = (itemId) => {
+    const newItems = cartItems.filter((item) => item.id !== itemId);
+    setCartItems(newItems);
+    Cookies.set('cartItems', JSON.stringify(newItems), { expires: 7 });
+  };
 
   const handleClick = () => {
     setShowLoginModal(true);
@@ -35,31 +46,35 @@ const ProductDetail = () => {
     setShowLoginModal(false);
   };
 
-  const addToCart = (item) => {
-    setCartItems((prevItems) => [...prevItems, item]);
-    handleOpenSidebar(); 
-  };
-
   const handleCloseSidebar = () => {
-    setShowSidebar(false); 
+    setShowSidebar(false);
   };
 
   const handleOpenSidebar = () => {
     if (cartItems.length > 0) {
-      setShowSidebar(true); 
+      setShowSidebar(true);
     }
   };
 
   return (
     <div className="DetailContainer">
       <NavFreteGratis />
-      <NavBar onLoginClick={handleClick} onOpenSidebar={handleOpenSidebar} />
+      <NavBar
+        onLoginClick={handleClick}
+        onOpenSidebar={handleOpenSidebar}
+        cartItems={cartItems}
+        setCartItems={setCartItems}
+      />
       {showLoginModal && <LoginModal onClose={handleCloseModal} />}
       <DropdownMenu />
       <DetailsCard product={product} onAddToCart={addToCart} />
       {showSidebar && cartItems.length > 0 && (
         <div className="sidebar">
-          <CarrinhoDeCompras cartItems={cartItems} setCartItems={setCartItems} onClose={handleCloseSidebar}/>
+          <CarrinhoDeCompras
+            cartItems={cartItems}
+            onRemove={handleRemoveFromCart}
+            onClose={handleCloseSidebar}
+          />
         </div>
       )}
     </div>
@@ -67,6 +82,17 @@ const ProductDetail = () => {
 };
 
 export default ProductDetail;
+
+
+
+
+
+
+
+
+
+
+
 
 
 

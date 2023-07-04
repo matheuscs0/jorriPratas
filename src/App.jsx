@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+
 const App = () => {
 
   return (
@@ -9,5 +10,6 @@ const App = () => {
 };
 
 export default App;
+
 
 
