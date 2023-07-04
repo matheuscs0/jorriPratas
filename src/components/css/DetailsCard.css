@@ -121,7 +121,7 @@
   background-color: #181717;
   color: aliceblue;
   transition: 0.5s ease-in-out;
-  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.35);
   transition: 0.5s ease-in-out;
 }
 .details-content button{
@@ -139,7 +139,7 @@
   margin-bottom: 3rem;
 }
 .details-content button:hover{
-  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.35);
   transition: 0.3s ease-in-out;
 }
 .about-images img:hover, .about-images img.selected{

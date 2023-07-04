@@ -5,12 +5,25 @@ import { HiShoppingBag } from 'react-icons/hi';
 import './css/NavBar.css'
 import SearchInput from './SearchInput';
 import CarrinhoDeCompras from './CarrinhoDeCompras';
+import FinalizarCompra from '../pages/CardResume';
 import './css/CarrinhoDeCompras.css'
+import { useEffect } from 'react';
 
 const NavBar = ({ onLoginClick, onOpenSidebar, onClose }) => {
   const navigate = useNavigate();
   const [showSidebar, setShowSidebar] = useState(false);
   const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    const storedCartItems = localStorage.getItem('cartItems');
+    if (storedCartItems) {
+      setCartItems(JSON.parse(storedCartItems));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const handleSearch = (searchTerm) => {
     navigate(`/search?q=${encodeURIComponent(searchTerm)}`);
@@ -37,11 +50,11 @@ const NavBar = ({ onLoginClick, onOpenSidebar, onClose }) => {
       </div>
       <div className="svgs">
         <VscAccount onClick={onLoginClick} />
-        <HiShoppingBag onClick={handleClick}/> 
+        <HiShoppingBag onClick={handleClick} alt="Carrinho"/> 
       </div>
       {showSidebar && (
         <div className="sidebar">
-          <CarrinhoDeCompras cartItems={cartItems} setCartItems={setCartItems} onClose={handleCloseSidebar} />
+          <CarrinhoDeCompras cartItems={cartItems} setCartItems={setCartItems} onClose={handleCloseSidebar}/>
         </div>
       )}
     </nav>
@@ -49,6 +62,9 @@ const NavBar = ({ onLoginClick, onOpenSidebar, onClose }) => {
 };
 
 export default NavBar;
+
+
+
 
 
 

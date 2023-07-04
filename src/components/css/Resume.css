@@ -1,0 +1,75 @@
+.resumeContainer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgb(240, 240, 240);
+  border: none;
+  border-radius: 10px;
+}
+.resumeTable{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.resumeTable th h4{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 3rem;
+}
+.resumeTable td{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  gap: 10rem;
+  margin-bottom: 0.5rem;
+}
+.resumeTable td p{
+  display: flex;
+  max-width: 100px;
+  width: 100px;
+}
+.pResume{
+  font-size: 14px;
+}
+.totalResume{
+  font-weight: 800;
+  font-size: 18px;
+}
+.linksResume{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.linksResume a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 350px;
+  text-decoration: none;
+}
+.finishButton{
+  display: flex;
+  background-color: #181717;
+  color: aliceblue;
+  transition: transform 500ms ease-in-out;
+}
+.finishButton:hover{
+  transform: scale(1.03);
+}
+.continueButton{
+  display: flex;
+  background-color: rgb(216, 216, 216);
+  color: #181717;
+}
+

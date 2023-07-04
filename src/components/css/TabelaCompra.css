@@ -1,0 +1,52 @@
+.tableCompras table{
+  border: 3px solid #00000015;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.productName{
+  max-width: 360px;
+  width: 360px;
+  align-items: center;
+}
+.prazoTag{
+  width: 180px;
+  max-width: 200px;
+}
+.priceTag{
+  width: 110px;
+  max-width: 110px;
+}
+.qntdTag{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.productsTag{
+  flex-direction: column;
+}
+.tableCompras table {
+  border-collapse: separate;
+  border-spacing: 0 10px; 
+}
+
+.tableCompras td, .tableCompras th {
+  padding: 10px; 
+  align-items: center;
+}
+
+.tableCompras td {
+  margin-right: 20px;
+  align-items: center;
+  
+}
+.tableCompras table img{
+  width: 80px;
+  height: 80px;
+  object-fit: scale-down;
+}
+
+.tableCompras th{
+  border-bottom: 2px solid #00000015; 
+}
