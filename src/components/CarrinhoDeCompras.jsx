@@ -1,7 +1,6 @@
-import './css/CarrinhoDeCompras.css';
-import { MdClose } from 'react-icons/md';
-import CardCart from './CardCart';
-import { Link } from 'react-router-dom';
+import './css/CarrinhoDeCompras.css'
+import { MdClose } from 'react-icons/md'
+import { useEffect, useState } from 'react';
 
 const CarrinhoDeCompras = ({ cartItems, onClose, onRemove }) => {
   const calcularTotal = () => {
@@ -25,22 +24,28 @@ const CarrinhoDeCompras = ({ cartItems, onClose, onRemove }) => {
         <h2>Carrinho de Compras</h2>
         {cartItems.length === 0 ? (
           <p>O carrinho está vazio.</p>
-        ) : (
-          <>
-            {cartItems.map((item) => (
-              <CardCart key={item.id} item={item} onRemove={handleRemoveItem} />
-            ))}
-            <div className="finishCart">
-              <p>
-                <div className="containerP">
-                  <div className="Ptotal">Total</div>
-                  <div className="pricePTotal">R$ {calcularTotal().toFixed(2)}</div>
-                </div>
-              </p>
-             <Link to="/finalizar-compra">Finalizar Compra</Link>
+          ) : (
+        <>
+          {cartItems.map((item) => (
+            <div key={item.id} className='productInCart'>
+              <div className="imgAndTitle">
+                <img src={item.poster_path} alt="" />
+                <h3>{item.title}</h3>
+              </div>
+              <p>Preço: R$ {item.size.price}</p>
             </div>
-          </>
-        )}
+          ))}
+          <div className='finishCart'>
+            <p>
+              <div className='containerP'>
+                <div className='Ptotal'>Total</div>   
+                <div className='pricePTotal'>R$ {calcularTotal().toFixed(2)}</div>
+              </div>
+            </p>
+            <button>Finalizar Compra</button>
+          </div>
+        </>
+      )}
       </div>
     </div>
   );

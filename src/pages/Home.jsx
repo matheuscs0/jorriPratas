@@ -7,6 +7,10 @@ import NavFreteGratis from '../components/navFreteGratis';
 import LoginModal from '../components/LoginModal';
 import Cookies from 'js-cookie';
 import CarrinhoDeCompras from '../components/CarrinhoDeCompras';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2bdeccafeb30dbe987a99b8fd65ad41445db20af
 
 const Home = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -48,7 +52,10 @@ const Home = () => {
     setCartItems(newItems);
     Cookies.set('cartItems', JSON.stringify(newItems), { expires: 7 });
   }
+<<<<<<< HEAD
   console.log(cartItems)
+=======
+>>>>>>> 2bdeccafeb30dbe987a99b8fd65ad41445db20af
 
   return (
     <div className="container">
