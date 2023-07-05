@@ -32,7 +32,7 @@ const Resume = ({ cartItems }) => {
         </tbody>
       </table>
       <div className="linksResume">
-        <Link className='finishButton'>Finalizar Compra</Link>
+        <Link to="/finalizar-compra"className='finishButton'>Finalizar Compra</Link>
         <Link to="/" className='continueButton'> Continuar Comprando</Link>
       </div>
     </div>

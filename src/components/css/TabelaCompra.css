@@ -50,3 +50,6 @@
 .tableCompras th{
   border-bottom: 2px solid #00000015; 
 }
+td svg{
+  cursor: pointer;
+}

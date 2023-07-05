@@ -16,7 +16,7 @@ const RoutesConfig = ({cartItems}) => {
         <Route path="product/:id" element={<ProductDetail />} />
         <Route path="/search-results" element={<Search />} />
         <Route path="/products/:type" element={<ProductPage />} />
-        <Route path="/finalizar-compra" element={<CardResume cartItems={cartItems}/>}></Route>
+        <Route path="/resume-compra" element={<CardResume cartItems={cartItems}/>}></Route>
       </Route>
     </Routes>
   );

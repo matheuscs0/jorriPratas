@@ -15,7 +15,7 @@
   display: flex;
   width: 100%;
   object-fit: contain;
-  mix-blend-mode: color-burn;
+  mix-blend-mode: multiply;
   margin-bottom: 3rem;
 }
 .cardProduct h2{

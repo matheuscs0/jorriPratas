@@ -62,10 +62,11 @@
   display: flex;
   background-color: #181717;
   color: aliceblue;
-  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in;
 }
 .finishButton:hover{
   transform: scale(1.03);
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
 }
 .continueButton{
   display: flex;

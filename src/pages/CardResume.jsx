@@ -2,13 +2,14 @@ import React from 'react';
 import TabelaCompras from '../components/TabelaCompras';
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
-import NavBar from '../components/NavBar'
-import NavFreteGratis from '../components/navFreteGratis'
-import './css/FinalizarCompra.css'
+import NavBar from '../components/NavBar';
+import NavFreteGratis from '../components/navFreteGratis';
+import './css/FinalizarCompra.css';
 import Resume from '../components/Resume';
 
 const CardResume = () => {
   const [cartItems, setCartItems] = useState([]);
+
   useEffect(() => {
     const storedCartItems = Cookies.get('cartItems');
     if (storedCartItems) {
@@ -22,6 +23,12 @@ const CardResume = () => {
   useEffect(() => {
     Cookies.set('cartItems', JSON.stringify(cartItems), { expires: 7 });
   }, [cartItems]);
+
+  const handleRemoveItem = (itemId) => {
+    const updatedCartItems = cartItems.filter(item => item.id !== itemId);
+    setCartItems(updatedCartItems);
+  };
+
   return (
     <div className='FinishContainer'>
       <NavFreteGratis/>
@@ -31,7 +38,7 @@ const CardResume = () => {
         <div className="finishDown">
          <div className="tableContainer">
           {cartItems.map((item) => (
-            <TabelaCompras key={item} item={item}/>
+            <TabelaCompras key={item.id} item={item} handleRemoveItem={handleRemoveItem}/>
           ))}
          </div>
           <div className='resume'>
@@ -44,5 +51,7 @@ const CardResume = () => {
 };
 
 export default CardResume;
+
+
 
 

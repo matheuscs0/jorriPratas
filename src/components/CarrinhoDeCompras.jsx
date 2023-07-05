@@ -37,7 +37,7 @@ const CarrinhoDeCompras = ({ cartItems, onClose, onRemove }) => {
                   <div className="pricePTotal">R$ {calcularTotal().toFixed(2)}</div>
                 </div>
               </p>
-             <Link to="/finalizar-compra">Finalizar Compra</Link>
+             <Link to="/resume-compra">Finalizar Compra</Link>
             </div>
           </>
         )}
