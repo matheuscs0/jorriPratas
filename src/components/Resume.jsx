@@ -26,7 +26,7 @@ const Resume = ({ cartItems }) => {
             <td><p>Subtotal</p> <p className='pResume'>R$ {calcularTotal()}</p></td>
           </tr>
           <tr>
-            <td><p>Entrega</p> <p className='pResume'>R$ 00,00</p></td>
+            <td><p>Entrega</p> <p className='pResume'>R$ </p></td>
             <td><h3>Total</h3> <p className='totalResume'>R$ {calcularTotal()}</p></td>
           </tr>
         </tbody>
@@ -40,3 +40,4 @@ const Resume = ({ cartItems }) => {
 };
 
 export default Resume;
+

@@ -2,10 +2,11 @@ import React from 'react';
 import TabelaCompras from '../components/TabelaCompras';
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
-import NavBar from '../components/NavBar';
+import Nav from '../components/Nav';
 import NavFreteGratis from '../components/navFreteGratis';
 import './css/FinalizarCompra.css';
 import Resume from '../components/Resume';
+import Cep from '../components/cep';
 
 const CardResume = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -32,7 +33,7 @@ const CardResume = () => {
   return (
     <div className='FinishContainer'>
       <NavFreteGratis/>
-      <NavBar/>
+      <Nav/>
       <div className='CardFinish'>
         <div className="titleFinish"><h2>Minhas Compras</h2></div>
         <div className="finishDown">
@@ -46,6 +47,7 @@ const CardResume = () => {
           </div>
         </div>
       </div>
+      <Cep/>
     </div>
   );
 };

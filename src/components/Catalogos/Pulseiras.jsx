@@ -42,19 +42,6 @@ const Pulseiras = () => {
       ],
     },
     {
-      id: "5034",
-      poster_path: "../public/imgs/Bolinha/pulseira_BolinhaCoracao.jpeg",
-      foto_about1: "../public/imgs/Bolinha/",
-      foto_about2: "../public/imgs/Bolinha/",
-      foto_about3: "../public/imgs/Bolinha/",
-      title: "PULSEIRA DE PRATA BOLINHA CORAÇÃO",
-      disponivel: "sim",
-      price: "R$54,90",
-      sizes: [
-        { size: "Padrão", price: "R$ 54,90" },
-      ],
-    },
-    {
       id: "7879",
       poster_path: "../public/imgs/Zirconia/pulseira_BrancoZirconia.jpeg",
       foto_about1: "../public/imgs/",

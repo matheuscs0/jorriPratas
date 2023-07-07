@@ -99,7 +99,7 @@ const ColarSwiper = () => {
       ],
     },
     {
-      id: "6146",
+      id: "7397",
       poster_path: "../public/imgs/PontoDeLuz/poster_pontoLuz.jpg",
       foto_about1: "../public/imgs/PontoDeLuz/colar_pontoLuz.jpg",
       title: "COLAR DE PRATA PONTO DE LUZ",

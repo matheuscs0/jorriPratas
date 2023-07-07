@@ -7,6 +7,7 @@ import ProductPage from '../pages/ProductPage';
 import App from '../App.jsx'
 
 import CardResume from '../pages/CardResume';
+import FinalizarCompra from '../pages/FinalizarCompra';
 
 const RoutesConfig = ({cartItems}) => {
   return (
@@ -17,6 +18,7 @@ const RoutesConfig = ({cartItems}) => {
         <Route path="/search-results" element={<Search />} />
         <Route path="/products/:type" element={<ProductPage />} />
         <Route path="/resume-compra" element={<CardResume cartItems={cartItems}/>}></Route>
+        <Route path='/finalizar-compra' element={<FinalizarCompra/>}></Route>
       </Route>
     </Routes>
   );

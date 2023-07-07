@@ -61,14 +61,14 @@ const Colar = () => {
       ],
     },
     {
-      id: "6146",
+      id: "7397",
       poster_path: "../public/imgs/PontoDeLuz/poster_pontoLuz.jpg",
       foto_about1: "../public/imgs/PontoDeLuz/colar_pontoLuz.jpg",
       title: "COLAR DE PRATA PONTO DE LUZ",
       disponivel: "sim",
-      price: "44.00",
+      price: "59.99",
       sizes: [
-        { size: "Padrão", price: "44.00" },
+        { size: "Padrão", price: "59.99" },
       ],
     },
     {
@@ -77,9 +77,9 @@ const Colar = () => {
       foto_about1: "../public/imgs/ColeçãoPraia/colar_concha.jpg",
       title: "COLAR DE PRATA CONCHA",
       disponivel: "sim",
-      price: "77.00",
+      price: "99.99",
       sizes: [
-        { size: "Padrão", price: "77.00" },
+        { size: "Padrão", price: "99.99" },
       ],
     },
     {

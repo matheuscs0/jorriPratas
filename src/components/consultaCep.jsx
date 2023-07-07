@@ -12,7 +12,6 @@ const CepSearch = () => {
     const newCep = event.target.value;
     setCep(newCep);
 
-    // Verifica se o campo do CEP foi apagado e limpa os outros campos
     if (newCep === '') {
       setAddress('');
       setCity('');

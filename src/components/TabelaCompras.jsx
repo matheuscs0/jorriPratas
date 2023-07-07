@@ -2,7 +2,7 @@ import React from 'react';
 import './css/TabelaCompra.css';
 import { BiTrash } from 'react-icons/bi';
 
-const TabelaCompras = ({ item, handleRemoveItem }) => {
+const TabelaCompras = ({ item, handleRemoveItem}) => {
   const handleRemoveItemClick = () => {
     handleRemoveItem(item.id);
   };
@@ -26,7 +26,7 @@ const TabelaCompras = ({ item, handleRemoveItem }) => {
                 <img src={item.poster_path} alt="" />
               </td>
               <td className="productName">{item.title}</td>
-              <td className="prazoTag">Em até 4 dias úteis</td>
+              <td className="prazoTag">Em até</td>
               <td className="priceTag">R$ {item.size.price}</td>
               <td className="qntdTag">1</td>
               <td>
