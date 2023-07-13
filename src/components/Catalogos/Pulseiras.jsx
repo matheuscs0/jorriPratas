@@ -1,6 +1,7 @@
 import ProductCard from "../ProductCard";
 
 const Pulseiras = () => {
+  
   const products = [
     {
       id: "P300440",

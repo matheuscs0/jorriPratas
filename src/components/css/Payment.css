@@ -1,0 +1,16 @@
+.containerFormPayment{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.paymentForm{
+  display: flex;
+  flex-direction: column;
+}
+.formInputsPayment{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}

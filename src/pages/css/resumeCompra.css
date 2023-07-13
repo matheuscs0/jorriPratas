@@ -1,0 +1,42 @@
+.FinishContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.CardFinish{
+  display:flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.titleFinish{
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-top: 5rem;
+}
+.tableContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  width: 80%;
+}
+.resume{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  width: 30%;
+}
+.finishDown{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 15rem;
+}

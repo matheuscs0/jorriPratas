@@ -1,13 +1,13 @@
-.resumeContainer{
+.resumeContainer1{
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 2rem;
-  background-color: #eeeeee;
+  background-color: #181717;
   border: none;
   border-radius: 10px;
   max-width: 430px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .resumeTable{
   display: flex;
@@ -75,4 +75,3 @@
   background-color: rgb(216, 216, 216);
   color: #181717;
 }
-

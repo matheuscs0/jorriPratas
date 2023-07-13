@@ -10,10 +10,12 @@ const CardCart = ({ item, onRemove }) => {
     <div className="productInCart">
       <div className="imgAndTitle">
         <img src={item.poster_path} alt="" />
+        <div className="priceTitle">
         <h3>{item.title}</h3>
+        <p>Preço: R$ {item.size.price}</p>
+        </div>
         <BiTrash onClick={handleRemoveItem} />
       </div>
-      <p>Preço: R$ {item.size.price}</p>
     </div>
   );
 };

@@ -53,3 +53,6 @@
 td svg{
   cursor: pointer;
 }
+td .quantify{
+  margin: 0.3rem;
+}

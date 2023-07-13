@@ -113,9 +113,9 @@ const products = [
   {
     id: "30002",
     poster_path: "../public/imgs/Veneziana/poster_veneziana.jpeg",
-    foto_about1: "../public/imgs/Veneziana/colar_veneziana2",
-    foto_about2: "../public/imgs/Veneziana/colar_veneziana3",
-    foto_about3: "../public/imgs/Veneziana/colar_veneziana4",
+    foto_about1: "../public/imgs/Veneziana/colar_veneziana2.jpg",
+    foto_about2: "../public/imgs/Veneziana/colar_veneziana3.jpg",
+    foto_about3: "../public/imgs/Veneziana/colar_veneziana04.jpg",
     title: "COLAR DE PRATA VENEZIANA",
     disponivel: "sim",
     price: "77.00",

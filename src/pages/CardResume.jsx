@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import Nav from '../components/Nav';
 import NavFreteGratis from '../components/navFreteGratis';
-import './css/FinalizarCompra.css';
+import './css/resumeCompra.css';
 import Resume from '../components/Resume';
 import Cep from '../components/cep';
 
@@ -47,7 +47,6 @@ const CardResume = () => {
           </div>
         </div>
       </div>
-      <Cep/>
     </div>
   );
 };

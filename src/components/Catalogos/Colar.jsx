@@ -5,20 +5,16 @@ const Colar = () => {
 
   const products = [
     {
-      id: "300440",
+      id: "300170",
       poster_path: "../public/imgs/Coração/poster_pulseiraCoracao.jpg",
       foto_about1: "../public/imgs/Coração/colar_coracao40cm.jpeg",
       foto_about2: "../public/imgs/Coração/colar_coracao.jpeg",
-      foto_about3: "../public/imgs/Coração/colar_coracao50cm.jpeg",
-      foto_about4: "../public/imgs/Coração/colar_coracao60cm.jpeg",
       title: "COLAR DE PRATA ELO CORAÇÃO",
       disponivel: "sim",
-      price: "95.90",
+      price: "94.99",
       sizes: [
-        { size: "40cm", price: "95.90" },
-        { size: "45cm", price: "97.90" },
-        { size: "50cm", price: "101.90" },
-        { size: "60cm", price: "111.90" },
+        { size: "40cm", price: "94.99" },
+        { size: "45cm", price: "99.99" },
       ],
     },
     {
@@ -29,9 +25,9 @@ const Colar = () => {
       disponivel: "sim",
       price: "84.90",
       sizes: [
-        { size: "40cm", price: "84.90" },
-        { size: "45cm", price: "87.90" },
-        { size: "50cm", price: "94.90" },
+        { size: "40cm", price: "84.99" },
+        { size: "45cm", price: "88.99" },
+        { size: "50cm", price: "99.99" },
       ],
     },
     {
@@ -40,24 +36,12 @@ const Colar = () => {
       foto_about1: "../public/imgs/Bolinha/colar_bolinha2.jpg",
       foto_about2: "../public/imgs/Bolinha/colar_bolinha.jpg",
       foto_about3: "../public/imgs/Bolinha/colar_bolinha3.jpg",
-      foto_about4: "../public/imgs/Bolinha/colar_bolinha4.jpg",
       title: "COLAR DE PRATA BOLINHA",
       disponivel: "sim",
-      price: "79.90" ,
+      price: "89.99" ,
       sizes: [
-        { size: "40cm", price: "79.90" },
-        { size: "45cm", price: "84.90" },
-        { size: "60cm", price: "110.90" },
-      ],
-    },
-    {
-      id: "5034",
-      poster_path: "../public/imgs/Bolinha/pulseira_BolinhaCoracao.jpeg",
-      title: "PULSEIRA DE PRATA BOLINHA CORAÇÃO",
-      disponivel: "sim",
-      price: "54.90",
-      sizes: [
-        { size: "Padrão", price: "54.90" },
+        { size: "40cm", price: "89.99" },
+        { size: "45cm", price: "99.99" },
       ],
     },
     {
@@ -88,9 +72,9 @@ const Colar = () => {
       foto_about1: "../public/imgs/ColeçãoPraia/colar_golfinho.jpg",
       title: "COLAR DE PRATA GOLFINHO",
       disponivel: "sim",
-      price: "59.00",
+      price: "59.99",
       sizes: [
-        { size: "Padrão", price: "59.00" },
+        { size: "Padrão", price: "59.99" },
       ],
     },
     {
@@ -99,9 +83,9 @@ const Colar = () => {
       foto_about1: "../public/imgs/ColeçãoPraia/colar_ondas.jpg",
       title: "COLAR DE PRATA ONDA",
       disponivel: "sim",
-      price: "77.00",
+      price: "79.99",
       sizes: [
-        { size: "Padrão", price: "77.00" },
+        { size: "Padrão", price: "79.99" },
       ],
     },
     {
@@ -110,9 +94,9 @@ const Colar = () => {
       foto_about1: "../public/imgs/ColeçãoPraia/colar_conchaAberto.jpg",
       title: "COLAR DE PRATA CONCHA ABERTO",
       disponivel: "sim",
-      price: "77.00",
+      price: "79.99",
       sizes: [
-        { size: "Padrão", price: "77.00" },
+        { size: "Padrão", price: "79.99" },
       ],
     },
     {
@@ -121,34 +105,24 @@ const Colar = () => {
       foto_about1: "../public/imgs/ColeçãoPraia/colar_estrelaCravejada.jpg",
       title: "COLAR DE PRATA ESTRELA CRAVEJADA ZIRCÔNIA",
       disponivel: "sim",
-      price: "147.00",
+      price: "139.99",
       sizes: [
-        { size: "40cm", price: "147.00" },
-        { size: "45cm", price: "149.00" },
+        { size: "40cm", price: "139.99" },
+        { size: "45cm", price: "149.99" },
       ],
     },
     {
       id: "30002",
       poster_path: "../public/imgs/Veneziana/poster_veneziana.jpeg",
-      foto_about1: "../public/imgs/Veneziana/colar_veneziana2",
-      foto_about2: "../public/imgs/Veneziana/colar_veneziana3",
-      foto_about3: "../public/imgs/Veneziana/colar_veneziana4",
+      foto_about1: "../public/imgs/Veneziana/colar_veneziana2.jpg",
+      foto_about2: "../public/imgs/Veneziana/colar_veneziana3.jpg",
+      foto_about3: "../public/imgs/Veneziana/colar_veneziana4.jpg",
       title: "COLAR DE PRATA VENEZIANA",
       disponivel: "sim",
-      price: "77.00",
+      price: "79.99",
       sizes: [
-        { size: "Padrão", price: "77.00" },
-      ],
-    },
-    {
-      id: "6635",
-      poster_path: "../public/imgs/Zirconia/poster_pedraZirconia.jpg",
-      foto_about1: "../public/imgs/Zirconia/colar_pedraZirconia.jpg",
-      title: "COLAR DE PRATA PEDRAS ZIRCÔNIA",
-      disponivel: "sim",
-      price: "89.80",
-      sizes: [
-        { size: "Padrão", price: "89.90" },
+        { size: "40cm", price: "79.99" },
+        { size: "45cm", price: "84.99" },
       ],
     },
     {
@@ -157,10 +131,10 @@ const Colar = () => {
       foto_about1: "../public/imgs/PerolaBarroca/colar_perolaBarroca.jpeg",
       title: "COLAR DE PÉROLA BARROCA",
       disponivel: "sim",
-      price: "119.00",
+      price: "94.99",
       sizes: [
-        { size: "40cm", price: "119.00" },
-        { size: "45cm", price: "124.00" },
+        { size: "40cm", price: "94.99" },
+        { size: "45cm", price: "99.99" },
       ],
     },
   ];

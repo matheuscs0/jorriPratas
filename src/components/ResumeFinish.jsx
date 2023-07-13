@@ -1,8 +1,8 @@
 import React from 'react';
-import './css/Resume.css';
-import { Link } from 'react-router-dom';
+import './css/ResumeFinish.css';
+import CardCart from './CardCart';
 
-const Resume = ({ cartItems }) => {
+const ResumeFinish = ({ cartItems }) => {
   const calcularTotal = () => {
     let total = 0;
     cartItems.forEach((item) => {
@@ -11,8 +11,15 @@ const Resume = ({ cartItems }) => {
     return total.toFixed(2);
   };
 
+  const handleRemoveItem = (itemId) => {
+    onRemove(itemId);
+  };
+
   return (
-    <div className="resumeContainer">
+    <div className="resumeContainer1">
+      {cartItems.map((item) => (
+        <CardCart key={item.id} item={item} onRemove={handleRemoveItem} />
+      ))}
       <table className="resumeTable">
         <thead>
           <tr>
@@ -40,15 +47,11 @@ const Resume = ({ cartItems }) => {
           </tr>
         </tbody>
       </table>
-      <div className="linksResume">
-        <Link to="/finalizar-compra" className='finishButton'>Finalizar Compra</Link>
-        <Link to="/" className='continueButton'> Continuar Comprando</Link>
-      </div>
     </div>
   );
 };
 
-export default Resume;
+export default ResumeFinish;
 
 
 
