@@ -10,9 +10,9 @@ const Tornozeleira = () => {
       foto_about3: "./public/imgs/",
       title: "TORNOZELEIRA DE PRATA ELO CORAÇÃO",
       disponivel: "sim",
-      price: "R$77,90",
+      price: "R$77.90",
       sizes: [
-        { size: "Padrão", price: "R$ 77,90" },
+        { size: "Padrão", price: "R$ 77.90" },
       ],
     },
     {
@@ -23,9 +23,9 @@ const Tornozeleira = () => {
       foto_about3: "./public/imgs/",
       title: "TORNOZELEIRA DE PRATA SINGAPURA",
       disponivel: "sim",
-      price: "R$77,90",
+      price: "R$77.90",
       sizes: [
-        { size: "Padrão", price: "R$ 77,90" },
+        { size: "Padrão", price: "R$ 77.90" },
       ],
     },
     {
@@ -36,9 +36,9 @@ const Tornozeleira = () => {
       foto_about3: "./public/imgs/Bolinha/",
       title: "TORNOZELEIRA DE PRATA BOLINHA",
       disponivel: "sim",
-      price: "R$77,90",
+      price: "R$77.90",
       sizes: [
-        { size: "Padrão", price: "R$ 77,90" },
+        { size: "Padrão", price: "R$ 77.90" },
       ],
     },
   ]

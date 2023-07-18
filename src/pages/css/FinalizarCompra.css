@@ -3,4 +3,30 @@
   justify-content: space-around;
   align-items: center;
   margin-top: 3rem;
+  padding: 1rem;
+  width: 100%;
+}
+.left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.rigth{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem ;
+  width: 30%;
+}
+.payment{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;
+  width: 50%;
+  margin: 0 auto;
+}
+.navs{
+  margin-bottom: 5rem;
 }

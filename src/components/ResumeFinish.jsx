@@ -1,8 +1,10 @@
 import React from 'react';
 import './css/ResumeFinish.css';
 import CardCart from './CardCart';
+import { Button } from '@mui/material';
+import {IoIosArrowBack} from 'react-icons/io'
 
-const ResumeFinish = ({ cartItems }) => {
+const ResumeFinish = ({ cartItems, onRemove, onNextStep, onPreviousStep }) => {
   const calcularTotal = () => {
     let total = 0;
     cartItems.forEach((item) => {
@@ -15,8 +17,19 @@ const ResumeFinish = ({ cartItems }) => {
     onRemove(itemId);
   };
 
+  const handleNext = () => {
+    onNextStep(); // Chama a função para avançar para a próxima etapa do formulário
+  };
+
+  const handleBack = () => {
+    onPreviousStep(); // Chama a função para voltar para a etapa anterior do formulário
+  };
+
   return (
     <div className="resumeContainer1">
+      <div className="back">
+        <IoIosArrowBack onClick={handleBack} />
+      </div>
       {cartItems.map((item) => (
         <CardCart key={item.id} item={item} onRemove={handleRemoveItem} />
       ))}
@@ -47,11 +60,18 @@ const ResumeFinish = ({ cartItems }) => {
           </tr>
         </tbody>
       </table>
+      <div>
+        <Button variant="contained" onClick={handleNext} size="small">
+          Próximo
+        </Button>
+      </div>
     </div>
   );
 };
 
 export default ResumeFinish;
+
+
 
 
 

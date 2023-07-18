@@ -8,6 +8,7 @@ import NavFreteGratis from "../components/navFreteGratis";
 import NavBar from "../components/NavBar";
 import { useState } from 'react'
 import LoginModal from '../components/LoginModal'
+import Aneis from "../components/Catalogos/Aneis";
 
 const ProductPage = () => {
   const { type } = useParams();
@@ -29,6 +30,8 @@ const ProductPage = () => {
         return <Pulseiras/>;
       case "tornozeleiras":
         return <Tornozeleira/>;
+        case "aneis":
+          return <Aneis/>
       default:
         return null;
     }

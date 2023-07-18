@@ -15,6 +15,9 @@ const DropdownMenu = () => {
        <Link to="/products/tornozeleiras">
         <li>Tornozeleiras</li>
        </Link>
+       <Link to='/products/aneis'>
+        <li>Anéis</li>
+       </Link>
       </div>
     </nav>
   )

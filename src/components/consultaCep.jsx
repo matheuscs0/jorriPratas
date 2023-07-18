@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import { Button } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import axios from 'axios';
-import {BiSearchAlt2} from 'react-icons/bi'
+import './css/consultaCep.css'
 
-const CepSearch = ({ onSubmit }) => {
+export default function ConsultaCep({ onSubmit, onNextStep }) {
   const [cep, setCep] = useState('');
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
@@ -29,60 +35,121 @@ const CepSearch = ({ onSubmit }) => {
     try {
       const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
       const { data } = response;
-      console.log(data)
 
       setAddress(data.logradouro);
       setCity(data.localidade);
       setState(data.uf);
+      const cepWithoutSpecialChars = cep.replace(/[-/]/g, '');
 
-      onSubmit({ cep: data.cep, address: data.logradouro, city: data.localidade, state: data.uf, number: number, complemento: complemento });
+      onSubmit({
+        cep: cepWithoutSpecialChars,
+        address: data.logradouro,
+        city: data.localidade,
+        state: data.uf,
+        number: number,
+        complemento: complemento,
+      });
     } catch (error) {
       console.error('Erro ao buscar CEP:', error);
     }
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    onSubmit({ cep: cep,
-      address: address,
-      city: city,
-      state: state,
-      number: number,
-      complemento: complemento, });
+  const handleNext = () => {
+    searchCep(); // Chama a função de busca do CEP
+    onNextStep(); // Chama a função para avançar para a próxima etapa
   };
 
   return (
-    <div className='containerForm'>
-      <h3>Entrega</h3>
-      <form className='formCep' onSubmit={handleSubmit}>
-        <p>CEP</p>
-        <div className='flex'>
-          <input type="text" value={cep} onChange={handleCepChange} placeholder="Digite o CEP" />
-          <button type="button" onClick={searchCep}><BiSearchAlt2 /></button>
-        </div>
-        <p><a href="https://buscacepinter.correios.com.br/app/endereco/index.php?t" target="_blank" rel="noopener noreferrer">Não sei meu cep</a></p>
-      </form>
-      <br />
-      <form className='formInputs'>
-        <p>ENDEREÇO</p>
-        <input type="text" value={address} placeholder="Endereço" disabled />
-        <br />
-        <p>CIDADE</p>
-        <input type="text" value={city} placeholder="Cidade" disabled />
-        <br />
-        <p>ESTADO</p>
-        <input type="text" value={state} placeholder="Estado" disabled />
-        <br />
-        <p>NÚMERO</p>
-        <input type="text" value={number} onChange={handleNumberChange} placeholder="Número" />
-        <p>COMPLEMENTO</p>
-        <input type="text" value={complemento} onChange={handleComplementoChange} placeholder="Complemento" />
-      </form>
-    </div>
+    <React.Fragment>
+      <Grid className='containerForm'>
+        <Typography variant="h6" gutterBottom>
+          Entrega
+        </Typography>
+        <Grid container spacing={2}>
+          <Grid item xs={0} sm={3}>
+            <TextField
+              required
+              id="firstName"
+              name="firstName"
+              label="Nome Completo"
+              fullWidth
+              autoComplete="given-name"
+              variant="standard"
+            />
+          </Grid>
+          <Grid className='flex'>
+            <TextField
+              required
+              label="CEP"
+              fullWidth
+              variant="standard"
+              value={cep}
+              onChange={handleCepChange}
+              item xs={0} sm={3}
+              
+            />
+            <button type="button" onClick={searchCep}><SearchOutlinedIcon /></button>
+          </Grid>
+          <Grid item xs={0} sm={3}>
+            <TextField
+              value={address}
+              name="address"
+              label="Address"
+              fullWidth
+              variant="standard"
+              disabled
+            />
+          </Grid>
+          <Grid item xs={0} sm={4}>
+            <TextField
+              value={city}
+              label="Cidade"
+              fullWidth
+              autoComplete="shipping address-line2"
+              variant="standard"
+              disabled
+            />
+          </Grid>
+          <Grid item xs={0} sm={4}>
+            <TextField
+              label="Estado"
+              fullWidth
+              autoComplete="shipping address-level2"
+              variant="standard"
+              value={state}
+              disabled
+            />
+          </Grid>
+          <Grid item xs={0} sm={2}>
+            <TextField
+              required
+              value={number}
+              onChange={handleNumberChange}
+              label="Número"
+              fullWidth
+              variant="standard"
+            />
+          </Grid>
+          <Grid item xs={0} sm={3}>
+            <TextField
+              required
+              value={complemento}
+              onChange={handleComplementoChange}
+              label="Complemento"
+              fullWidth
+              variant="standard"
+            />
+          </Grid>
+          <Button variant="contained" onClick={handleNext} size="small" endIcon={<SendIcon />}>
+            Próximo
+          </Button>
+        </Grid>
+      </Grid>
+    </React.Fragment>
   );
-};
+}
 
-export default CepSearch;
+
 
 
 
