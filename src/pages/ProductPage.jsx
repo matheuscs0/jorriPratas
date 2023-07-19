@@ -9,17 +9,30 @@ import NavBar from "../components/NavBar";
 import { useState } from 'react'
 import LoginModal from '../components/LoginModal'
 import Aneis from "../components/Catalogos/Aneis";
+import Brincos from "../components/Catalogos/Brincos";
 
 const ProductPage = () => {
   const { type } = useParams();
   const [showLoginModal, setShowLoginModal] = useState(false);
-
+  const [cartItems, setCartItems] = useState([]);
+  const [showSidebar, setShowSidebar] = useState(false);
+  
   const handleClick = () => {
     setShowLoginModal(true);
   };
 
   const handleCloseModal = () => {
     setShowLoginModal(false);
+  };
+
+  const handleCloseSidebar = () => {
+    setShowSidebar(false);
+  };
+
+  const handleOpenSidebar = () => {
+    if (cartItems.length > 0) {
+      setShowSidebar(true);
+    }
   };
   // Renderiza os produtos com base no tipo selecionado
   const renderProducts = () => {
@@ -32,6 +45,8 @@ const ProductPage = () => {
         return <Tornozeleira/>;
         case "aneis":
           return <Aneis/>
+          case "brincos":
+            return <Brincos/>
       default:
         return null;
     }
@@ -40,9 +55,14 @@ const ProductPage = () => {
   return (
 <div className="gridProduct">
   <NavFreteGratis/>
-  <NavBar onLoginClick={handleClick} />
+  <NavBar
+        onLoginClick={handleClick}
+        onOpenSidebar={handleOpenSidebar}
+        cartItems={cartItems}
+        setCartItems={setCartItems}
+    />
       {showLoginModal && <LoginModal onClose={handleCloseModal} />}
-  <DropdownMenu/>
+  <DropdownMenu />
   {renderProducts()}</div>
   ) 
   

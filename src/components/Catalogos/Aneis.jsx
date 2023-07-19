@@ -10,13 +10,13 @@ const Aneis = () => {
       "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
-      "price": "R$89.00",
+      "price": "89.00",
       "sizes": [
-        { "size": "12", "price": "R$ 89.00" },
-        { "size": "14", "price": "R$ 89.00" },
-        { "size": "16", "price": "R$ 89.00" },
-        { "size": "18", "price": "R$ 89.00" },
-        { "size": "20", "price": "R$ 89.00" }
+        { "size": "12", "price": "89.00" },
+        { "size": "14", "price": "89.00" },
+        { "size": "16", "price": "89.00" },
+        { "size": "18", "price": "89.00" },
+        { "size": "20", "price": "89.00" }
       ]
     },
     {
@@ -27,13 +27,13 @@ const Aneis = () => {
       "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
-      "price": "R$89.00",
+      "price": "89.00",
       "sizes": [
-        { "size": "12", "price": "R$ 89.00" },
-        { "size": "14", "price": "R$ 89.00" },
-        { "size": "16", "price": "R$ 89.00" },
-        { "size": "18", "price": "R$ 89.00" },
-        { "size": "20", "price": "R$ 89.00" }
+        { "size": "12", "price": " 89.00" },
+        { "size": "14", "price": " 89.00" },
+        { "size": "16", "price": " 89.00" },
+        { "size": "18", "price": " 89.00" },
+        { "size": "20", "price": " 89.00" }
       ]
     },
     {
@@ -44,14 +44,14 @@ const Aneis = () => {
       "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
-      "price": "R$99.99",
+      "price": "99.99",
       "sizes": [
-        { "size": "12", "price": "R$ 99.99" },
-        { "size": "14", "price": "R$ 99.99" },
-        { "size": "16", "price": "R$ 99.99" },
-        { "size": "18", "price": "R$ 99.99" },
-        { "size": "20", "price": "R$ 99.99" },
-        { "size": "22", "price": "R$ 99.99" }
+        { "size": "12", "price": " 99.99" },
+        { "size": "14", "price": " 99.99" },
+        { "size": "16", "price": " 99.99" },
+        { "size": "18", "price": " 99.99" },
+        { "size": "20", "price": " 99.99" },
+        { "size": "22", "price": " 99.99" }
       ]
     },
     {
@@ -62,13 +62,13 @@ const Aneis = () => {
       "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
-      "price": "R$119.99",
+      "price": "119.99",
       "sizes": [
-        { "size": "12", "price": "R$ 119.99" },
-        { "size": "14", "price": "R$ 119.99" },
-        { "size": "16", "price": "R$ 119.99" },
-        { "size": "18", "price": "R$ 119.99" },
-        { "size": "20", "price": "R$ 119.99" }
+        { "size": "12", "price": " 119.99" },
+        { "size": "14", "price": " 119.99" },
+        { "size": "16", "price": " 119.99" },
+        { "size": "18", "price": " 119.99" },
+        { "size": "20", "price": " 119.99" }
       ]
     },
     {
@@ -79,14 +79,14 @@ const Aneis = () => {
       "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
-      "price": "R$99.99",
+      "price": "99.99",
       "sizes": [
-        { "size": "12", "price": "R$ 99.99" },
-        { "size": "14", "price": "R$ 99.99" },
-        { "size": "16", "price": "R$ 99.99" },
-        { "size": "18", "price": "R$ 99.99" },
-        { "size": "20", "price": "R$ 99.99" },
-        { "size": "22", "price": "R$ 99.99" }
+        { "size": "12", "price": " 99.99" },
+        { "size": "14", "price": " 99.99" },
+        { "size": "16", "price": " 99.99" },
+        { "size": "18", "price": " 99.99" },
+        { "size": "20", "price": " 99.99" },
+        { "size": "22", "price": " 99.99" }
       ]
     },
     {
@@ -97,14 +97,14 @@ const Aneis = () => {
       "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
-      "price": "R$119.99",
+      "price": "119.99",
       "sizes": [
-        { "size": "12", "price": "R$ 119.99" },
-        { "size": "14", "price": "R$ 119.99" },
-        { "size": "16", "price": "R$ 119.99" },
-        { "size": "18", "price": "R$ 119.99" },
-        { "size": "20", "price": "R$ 119.99" },
-        { "size": "22", "price": "R$ 119.99" }
+        { "size": "12", "price": " 119.99" },
+        { "size": "14", "price": " 119.99" },
+        { "size": "16", "price": " 119.99" },
+        { "size": "18", "price": " 119.99" },
+        { "size": "20", "price": " 119.99" },
+        { "size": "22", "price": " 119.99" }
       ]
     },
     {
@@ -115,10 +115,10 @@ const Aneis = () => {
       "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
-      "price": "R$119.99",
+      "price": "119.99",
       "sizes": [
-        { "size": "12", "price": "R$ 119.99" },
-        { "size": "15", "price": "R$ 119.99" }
+        { "size": "12", "price": " 119.99" },
+        { "size": "15", "price": " 119.99" }
       ]
     },
     {
@@ -129,13 +129,13 @@ const Aneis = () => {
       "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
-      "price": "R$119.99",
+      "price": "119.99",
       "sizes": [
-        { "size": "12", "price": "R$ 119.99" },
-        { "size": "14", "price": "R$ 119.99" },
-        { "size": "16", "price": "R$ 119.99" },
-        { "size": "18", "price": "R$ 119.99" },
-        { "size": "20", "price": "R$ 119.99" }
+        { "size": "12", "price": " 119.99" },
+        { "size": "14", "price": " 119.99" },
+        { "size": "16", "price": " 119.99" },
+        { "size": "18", "price": " 119.99" },
+        { "size": "20", "price": " 119.99" }
       ]
     },
     {
@@ -146,14 +146,14 @@ const Aneis = () => {
       "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
-      "price": "R$119.99",
+      "price": "119.99",
       "sizes": [
-        { "size": "12", "price": "R$ 119.99" },
-        { "size": "14", "price": "R$ 119.99" },
-        { "size": "16", "price": "R$ 119.99" },
-        { "size": "18", "price": "R$ 119.99" },
-        { "size": "20", "price": "R$ 119.99" },
-        { "size": "22", "price": "R$ 119.99" }
+        { "size": "12", "price": " 119.99" },
+        { "size": "14", "price": " 119.99" },
+        { "size": "16", "price": " 119.99" },
+        { "size": "18", "price": " 119.99" },
+        { "size": "20", "price": " 119.99" },
+        { "size": "22", "price": " 119.99" }
       ]
     },
     {
@@ -164,14 +164,14 @@ const Aneis = () => {
       "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
-      "price": "R$119.99",
+      "price": "119.99",
       "sizes": [
-        { "size": "12", "price": "R$ 119.99" },
-        { "size": "14", "price": "R$ 119.99" },
-        { "size": "16", "price": "R$ 119.99" },
-        { "size": "18", "price": "R$ 119.99" },
-        { "size": "20", "price": "R$ 119.99" },
-        { "size": "22", "price": "R$ 119.99" }
+        { "size": "12", "price": " 119.99" },
+        { "size": "14", "price": " 119.99" },
+        { "size": "16", "price": " 119.99" },
+        { "size": "18", "price": " 119.99" },
+        { "size": "20", "price": " 119.99" },
+        { "size": "22", "price": " 119.99" }
       ]
     },
     {
@@ -182,11 +182,11 @@ const Aneis = () => {
       "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA CORAÇÃO CHEIO",
       "disponivel": "sim",
-      "price": "R$89.00",
+      "price": "89.00",
       "sizes": [
-        { "size": "12", "price": "R$ 89.00" },
-        { "size": "13", "price": "R$ 89.00" },
-        { "size": "15", "price": "R$ 89.00" }
+        { "size": "12", "price": " 89.00" },
+        { "size": "13", "price": " 89.00" },
+        { "size": "15", "price": " 89.00" }
       ]
     },
     {
@@ -197,14 +197,14 @@ const Aneis = () => {
       "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA CORRENTE",
       "disponivel": "sim",
-      "price": "R$99.99",
+      "price": "99.99",
       "sizes": [
-        { "size": "12", "price": "R$ 99.99" },
-        { "size": "14", "price": "R$ 99.99" },
-        { "size": "16", "price": "R$ 99.99" },
-        { "size": "18", "price": "R$ 99.99" },
-        { "size": "20", "price": "R$ 99.99" },
-        { "size": "22", "price": "R$ 99.99" }
+        { "size": "12", "price": " 99.99" },
+        { "size": "14", "price": " 99.99" },
+        { "size": "16", "price": " 99.99" },
+        { "size": "18", "price": " 99.99" },
+        { "size": "20", "price": " 99.99" },
+        { "size": "22", "price": " 99.99" }
       ]
     },
     {
@@ -215,13 +215,13 @@ const Aneis = () => {
       "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA CORAÇÃO LISO",
       "disponivel": "sim",
-      "price": "R$79.00",
+      "price": "79.00",
       "sizes": [
-        { "size": "12", "price": "R$ 79.00" },
-        { "size": "13", "price": "R$ 79.00" },
-        { "size": "15", "price": "R$ 79.00" }
+        { "size": "12", "price": " 79.00" },
+        { "size": "13", "price": " 79.00" },
+        { "size": "15", "price": " 79.00" }
       ]
-    }    
+    },    
   ]
   return (
     <div className='productContainer'>

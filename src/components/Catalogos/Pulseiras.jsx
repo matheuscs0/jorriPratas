@@ -11,9 +11,9 @@ const Pulseiras = () => {
       "foto_about3": "../public/imgs/",
       "title": "PULSEIRA DE PRATA ELO CORAÇÃO",
       "disponivel": "sim",
-      "price": "R$ 54.90",
+      "price": "54.90",
       "sizes": [
-        { "size": "Padrão", "price": "R$ 54.90" }
+        { "size": "Padrão", "price": "54.90" }
       ]
     },
     {
@@ -24,9 +24,9 @@ const Pulseiras = () => {
       "foto_about3": "../public/imgs/",
       "title": "PULSEIRA DE PRATA SINGAPURA",
       "disponivel": "sim",
-      "price": "R$54.90",
+      "price": "54.90",
       "sizes": [
-        { "size": "Padrão", "price": "R$ 54.90" }
+        { "size": "Padrão", "price": "54.90" }
       ]
     },
     {
@@ -37,9 +37,9 @@ const Pulseiras = () => {
       "foto_about3": "../public/imgs/Bolinha/",
       "title": "PULSEIRA DE PRATA BOLINHA",
       "disponivel": "sim",
-      "price": "R$54.90",
+      "price": "54.90",
       "sizes": [
-        { "size": "Padrão", "price": "R$ 54.90" }
+        { "size": "Padrão", "price": "54.90" }
       ]
     },
     {
@@ -50,9 +50,9 @@ const Pulseiras = () => {
       "foto_about3": "../public/imgs/",
       "title": "PULSEIRA DE PRATA CORAÇÃO BRANCO ZIRCÔNIA",
       "disponivel": "sim",
-      "price": "R$99.00",
+      "price": "99.00",
       "sizes": [
-        { "size": "Padrão", "price": "R$ 99.00" }
+        { "size": "Padrão", "price": "99.00" }
       ]
     },
     {
@@ -63,9 +63,9 @@ const Pulseiras = () => {
       "foto_about3": "../public/imgs/",
       "title": "PULSEIRA DE PRATA CORAÇÃO ZIRCÔNIA",
       "disponivel": "sim",
-      "price": "R$119.00",
+      "price": "119.00",
       "sizes": [
-        { "size": "Padrão", "price": "R$ 119.00" }
+        { "size": "Padrão", "price": "119.00" }
       ]
     },
     {
@@ -76,9 +76,9 @@ const Pulseiras = () => {
       "foto_about3": "../public/imgs/",
       "title": "PULSEIRA DE PRATA CRISTAL ZIRCÔNIA",
       "disponivel": "sim",
-      "price": "R$64.00",
+      "price": "64.00",
       "sizes": [
-        { "size": "Padrão", "price": "R$ 64.00" }
+        { "size": "Padrão", "price": "64.00" }
       ]
     },
     {
@@ -89,9 +89,9 @@ const Pulseiras = () => {
       "foto_about3": "../public/imgs/",
       "title": "PULSEIRA DE PRATA GOTAS DE CRISTAL RIVIERA",
       "disponivel": "sim",
-      "price": "R$199.00",
+      "price": "199.00",
       "sizes": [
-        { "size": "Padrão", "price": "R$ 199.00" }
+        { "size": "Padrão", "price": "199.00" }
       ]
     },
     {
@@ -102,9 +102,9 @@ const Pulseiras = () => {
       "foto_about3": "../public/imgs/",
       "title": "PULSEIRA DE PRATA CORAÇÃO CRISTAL RIVIERA",
       "disponivel": "sim",
-      "price": "R$199.00",
+      "price": "199.00",
       "sizes": [
-        { "size": "Padrão", "price": "R$ 199.00" }
+        { "size": "Padrão", "price": "199.00" }
       ]
     },
     {
@@ -115,9 +115,9 @@ const Pulseiras = () => {
       "foto_about3": "../public/imgs/",
       "title": "PULSEIRA DE PRATA STAR",
       "disponivel": "sim",
-      "price": "R$129.00",
+      "price": "129.00",
       "sizes": [
-        { "size": "Padrão", "price": "R$ 129.00" }
+        { "size": "Padrão", "price": "129.00" }
       ]
     },
     {
@@ -128,9 +128,9 @@ const Pulseiras = () => {
       "foto_about3": "../public/imgs/",
       "title": "PULSEIRA DE PRATA CRUZ",
       "disponivel": "sim",
-      "price": "R$149.00",
+      "price": "149.00",
       "sizes": [
-        { "size": "Padrão", "price": "R$ 149.00" }
+        { "size": "Padrão", "price": "149.00" }
       ]
     },
     {
@@ -141,9 +141,9 @@ const Pulseiras = () => {
       "foto_about3": "../public/imgs/",
       "title": "PULSEIRA DE PRATA TIEMPO FIO QUADRADO",
       "disponivel": "sim",
-      "price": "R$99.00",
+      "price": "99.00",
       "sizes": [
-        { "size": "Padrão", "price": "R$ 99.00" }
+        { "size": "Padrão", "price": "99.00" }
       ]
     },
     {
@@ -154,9 +154,9 @@ const Pulseiras = () => {
       "foto_about3": "../public/imgs/",
       "title": "BRACELETE DE PRATA TIEMPO FIO REDONDO",
       "disponivel": "sim",
-      "price": "R$99.00",
+      "price": "99.00",
       "sizes": [
-        { "size": "Padrão", "price": "R$ 99.00" }
+        { "size": "Padrão", "price": "99.00" }
       ]
     },
     {
@@ -167,12 +167,11 @@ const Pulseiras = () => {
       "foto_about3": "../public/imgs/",
       "title": "BRACELETE DE PRATA TIEMPO FIO TORCIDO",
       "disponivel": "sim",
-      "price": "R$99.00",
+      "price": "99.00",
       "sizes": [
-        { "size": "Padrão", "price": "R$ 99.00" }
+        { "size": "Padrão", "price": "99.00" }
       ]
     }
-    
   ]
 
   return (
