@@ -5,9 +5,8 @@ const Aneis = () => {
     {
       "id": "8403",
       "poster_path": "../public/imgs/Aneis/anel1.jpeg",
-      "foto_about1": "../public/imgs/",
-      "foto_about2": "./public/imgs/",
-      "foto_about3": "./public/imgs/",
+      
+      
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
       "price": "89.00",
@@ -22,9 +21,6 @@ const Aneis = () => {
     {
       "id": "4878",
       "poster_path": "../public/imgs/Aneis/anel2.jpeg",
-      "foto_about1": "../public/imgs/",
-      "foto_about2": "./public/imgs/",
-      "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
       "price": "89.00",
@@ -39,9 +35,6 @@ const Aneis = () => {
     {
       "id": "5169",
       "poster_path": "../public/imgs/Aneis/anel3.jpeg",
-      "foto_about1": "../public/imgs/",
-      "foto_about2": "./public/imgs/",
-      "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
       "price": "99.99",
@@ -57,9 +50,6 @@ const Aneis = () => {
     {
       "id": "3641",
       "poster_path": "../public/imgs/Aneis/anel4.jpeg",
-      "foto_about1": "../public/imgs/",
-      "foto_about2": "./public/imgs/",
-      "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
       "price": "119.99",
@@ -74,9 +64,6 @@ const Aneis = () => {
     {
       "id": "3662",
       "poster_path": "../public/imgs/Aneis/anel5.jpeg",
-      "foto_about1": "../public/imgs/",
-      "foto_about2": "./public/imgs/",
-      "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
       "price": "99.99",
@@ -92,9 +79,6 @@ const Aneis = () => {
     {
       "id": "5731",
       "poster_path": "../public/imgs/Aneis/anel6.jpeg",
-      "foto_about1": "../public/imgs/",
-      "foto_about2": "./public/imgs/",
-      "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
       "price": "119.99",
@@ -110,9 +94,6 @@ const Aneis = () => {
     {
       "id": "4906",
       "poster_path": "../public/imgs/Aneis/anel7.jpeg",
-      "foto_about1": "../public/imgs/",
-      "foto_about2": "./public/imgs/",
-      "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
       "price": "119.99",
@@ -124,9 +105,6 @@ const Aneis = () => {
     {
       "id": "4881",
       "poster_path": "../public/imgs/Aneis/anel8.jpeg",
-      "foto_about1": "../public/imgs/",
-      "foto_about2": "./public/imgs/",
-      "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
       "price": "119.99",
@@ -141,9 +119,6 @@ const Aneis = () => {
     {
       "id": "5041",
       "poster_path": "../public/imgs/Aneis/anel9.jpeg",
-      "foto_about1": "../public/imgs/",
-      "foto_about2": "./public/imgs/",
-      "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
       "price": "119.99",
@@ -159,9 +134,6 @@ const Aneis = () => {
     {
       "id": "5041",
       "poster_path": "../public/imgs/Aneis/anel10.jpeg",
-      "foto_about1": "../public/imgs/",
-      "foto_about2": "./public/imgs/",
-      "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA SOLITÁRIO",
       "disponivel": "sim",
       "price": "119.99",
@@ -177,9 +149,6 @@ const Aneis = () => {
     {
       "id": "6811",
       "poster_path": "../public/imgs/Aneis/anelCoracaoCheio.jpeg",
-      "foto_about1": "../public/imgs/",
-      "foto_about2": "./public/imgs/",
-      "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA CORAÇÃO CHEIO",
       "disponivel": "sim",
       "price": "89.00",
@@ -192,9 +161,6 @@ const Aneis = () => {
     {
       "id": "7256",
       "poster_path": "../public/imgs/Aneis/anelPrataCorrente.jpeg",
-      "foto_about1": "../public/imgs/",
-      "foto_about2": "./public/imgs/",
-      "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA CORRENTE",
       "disponivel": "sim",
       "price": "99.99",
@@ -210,9 +176,6 @@ const Aneis = () => {
     {
       "id": "6811",
       "poster_path": "../public/imgs/Aneis/anelLiso.jpeg",
-      "foto_about1": "../public/imgs/",
-      "foto_about2": "./public/imgs/",
-      "foto_about3": "./public/imgs/",
       "title": "ANEL PRATA CORAÇÃO LISO",
       "disponivel": "sim",
       "price": "79.00",

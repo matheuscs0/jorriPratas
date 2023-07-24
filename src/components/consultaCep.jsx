@@ -15,6 +15,7 @@ export default function ConsultaCep({ onSubmit, onNextStep }) {
   const [state, setState] = useState('');
   const [number, setNumber] = useState('');
   const [complemento, setComplemento] = useState('');
+  
 
   const handleCepChange = (event) => {
     const newCep = event.target.value;
@@ -55,8 +56,19 @@ export default function ConsultaCep({ onSubmit, onNextStep }) {
   };
 
   const handleNext = () => {
+    if (
+      cep === '' ||
+      address === '' ||
+      state === '' ||
+      city === '' ||
+      number === '' ||
+      complemento === '' 
+    ) {
+      alert('Preencha todos os campos');
+      return;
+    }
     searchCep(); // Chama a função de busca do CEP
-    onNextStep(); // Chama a função para avançar para a próxima etapa
+    onNextStep();
   };
 
   return (
@@ -86,7 +98,6 @@ export default function ConsultaCep({ onSubmit, onNextStep }) {
               value={cep}
               onChange={handleCepChange}
               item xs={0} sm={3}
-              
             />
             <button type="button" onClick={searchCep}><SearchOutlinedIcon /></button>
           </Grid>
@@ -125,6 +136,7 @@ export default function ConsultaCep({ onSubmit, onNextStep }) {
               required
               value={number}
               onChange={handleNumberChange}
+              autoComplete="number"
               label="Número"
               fullWidth
               variant="standard"
@@ -136,6 +148,7 @@ export default function ConsultaCep({ onSubmit, onNextStep }) {
               value={complemento}
               onChange={handleComplementoChange}
               label="Complemento"
+              autoComplete="complement"
               fullWidth
               variant="standard"
             />

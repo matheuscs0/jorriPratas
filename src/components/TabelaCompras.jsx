@@ -41,7 +41,9 @@ const TabelaCompras = ({ item, handleRemoveItem }) => {
             <td>
               <img src={item.poster_path} alt="" />
             </td>
-            <td className="productName">{item.title}</td>
+            <td className="productName">{item.title} <br/>
+            Tamanho: {item.size.size}
+            </td>
             <td className="prazoTag">Em até 7 dias úteis</td>
             <td className="priceTag">R$ {value}</td>
             <td className="qntdTag">

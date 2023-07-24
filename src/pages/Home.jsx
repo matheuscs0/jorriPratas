@@ -7,6 +7,7 @@ import NavFreteGratis from '../components/navFreteGratis';
 import LoginModal from '../components/LoginModal';
 import Cookies from 'js-cookie';
 import CarrinhoDeCompras from '../components/CarrinhoDeCompras';
+import './css/home.css'
 
 const Home = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -52,6 +53,7 @@ const Home = () => {
 
   return (
     <div className="container">
+      <div className='navContainer'>
       <NavFreteGratis />
       <NavBar 
         onLoginClick={handleClick}
@@ -59,6 +61,7 @@ const Home = () => {
         cartItems={cartItems}
         setCartItems={setCartItems}
       />
+      </div>
       {showLoginModal && <LoginModal onClose={handleCloseModal} />}
       <DropdownMenu />
       <ColarSwiper />

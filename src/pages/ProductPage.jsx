@@ -6,17 +6,33 @@ import Tornozeleira from '../components/Catalogos/Tornozeleira'
 import DropdownMenu from "../components/DropdownMenu";
 import NavFreteGratis from "../components/navFreteGratis";
 import NavBar from "../components/NavBar";
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Cookies from "js-cookie";
 import LoginModal from '../components/LoginModal'
 import Aneis from "../components/Catalogos/Aneis";
 import Brincos from "../components/Catalogos/Brincos";
+import CarrinhoDeCompras from "../components/CarrinhoDeCompras";
 
 const ProductPage = () => {
   const { type } = useParams();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [showSidebar, setShowSidebar] = useState(false);
-  
+
+  useEffect(() => {
+    const storedCartItems = Cookies.get('cartItems');
+    if (storedCartItems) {
+      const parsedCartItems = JSON.parse(storedCartItems);
+      if (parsedCartItems.length > 0) {
+        setCartItems(parsedCartItems);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    Cookies.set('cartItems', JSON.stringify(cartItems), { expires: 7 });
+  }, [cartItems]);
+
   const handleClick = () => {
     setShowLoginModal(true);
   };
@@ -34,6 +50,11 @@ const ProductPage = () => {
       setShowSidebar(true);
     }
   };
+  const handleRemoveFromCart = (itemId) => {
+    const newItems = cartItems.filter((item) => item.id !== itemId);
+    setCartItems(newItems);
+    Cookies.set('cartItems', JSON.stringify(newItems), { expires: 7 });
+  }
   // Renderiza os produtos com base no tipo selecionado
   const renderProducts = () => {
     switch (type) {
@@ -63,6 +84,15 @@ const ProductPage = () => {
     />
       {showLoginModal && <LoginModal onClose={handleCloseModal} />}
   <DropdownMenu />
+  {showSidebar && cartItems.length > 0 && (
+        <div className="sidebar">
+          <CarrinhoDeCompras
+            cartItems={cartItems}
+            onRemove={handleRemoveFromCart}
+            onClose={handleCloseSidebar}
+          />
+        </div>
+      )}
   {renderProducts()}</div>
   ) 
   

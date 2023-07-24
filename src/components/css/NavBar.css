@@ -8,6 +8,7 @@
   position: sticky;
   top: 35px;
   z-index: 990;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.39);
 }
 .logo{
   display: flex;
@@ -38,3 +39,4 @@
   height:30px;
   cursor: pointer;
 }
+

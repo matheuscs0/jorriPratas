@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   color: aliceblue;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.39);
 }
 .security svg{
   display: flex;

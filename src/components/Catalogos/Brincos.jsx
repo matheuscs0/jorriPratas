@@ -5,9 +5,6 @@ const Brincos = () => {
     {
       id: "5659",
       poster_path: "../public/imgs/Brincos/brincoCoracao.jpeg",
-      foto_about1: "../public/imgs/",
-      foto_about2: "./public/imgs/",
-      foto_about3: "./public/imgs/",
       title: "BRINCO PRATA CORAÇÃO",
       disponivel: "sim",
       price: "39.99",
@@ -18,9 +15,6 @@ const Brincos = () => {
     {
       id: "5908",
       poster_path: "../public/imgs/Brincos/brincoFlor.jpeg",
-      foto_about1: "../public/imgs/",
-      foto_about2: "./public/imgs/",
-      foto_about3: "./public/imgs/",
       title: "BRINCO PRATA FLOR",
       disponivel: "sim",
       price: "39.99",
@@ -31,9 +25,6 @@ const Brincos = () => {
     {
       id: "6839",
       poster_path: "../public/imgs/Brincos/brincoCobra.jpeg",
-      foto_about1: "../public/imgs/",
-      foto_about2: "./public/imgs/",
-      foto_about3: "./public/imgs/",
       title: "BRINCO PRATA COBRA",
       disponivel: "sim",
       price: "39.99",
@@ -44,9 +35,6 @@ const Brincos = () => {
     {
       id: "6815",
       poster_path: "../public/imgs/Brincos/brincoTrevo.jpeg",
-      foto_about1: "../public/imgs/",
-      foto_about2: "./public/imgs/",
-      foto_about3: "./public/imgs/",
       title: "BRINCO PRATA TREVO",
       disponivel: "sim",
       price: "39.99",
@@ -57,9 +45,6 @@ const Brincos = () => {
     {
       id: "5656",
       poster_path: "../public/imgs/Brincos/brincoConcha.jpeg",
-      foto_about1: "../public/imgs/",
-      foto_about2: "./public/imgs/",
-      foto_about3: "./public/imgs/",
       title: "BRINCO PRATA CONCHA",
       disponivel: "sim",
       price: "39.99",
@@ -69,10 +54,7 @@ const Brincos = () => {
     },
     {
       id: "4069",
-      poster_path: "../public/imgs/Brincos/brincoMeiaLua.jpeg",
-      foto_about1: "../public/imgs/",
-      foto_about2: "./public/imgs/",
-      foto_about3: "./public/imgs/",
+      poster_path: '../public/imgs/Brincos/brincoMeiaLua.jpeg',
       title: "BRINCO PRATA MEIA LUA",
       disponivel: "sim",
       price: "39.99",
@@ -83,9 +65,6 @@ const Brincos = () => {
     {
       id: "2034",
       poster_path: "../public/imgs/Brincos/brincoPage.jpeg",
-      foto_about1: "../public/imgs/",
-      foto_about2: "./public/imgs/",
-      foto_about3: "./public/imgs/",
       title: "BRINCO PRATA TREVO",
       disponivel: "sim",
       price: "39.99",
@@ -95,10 +74,7 @@ const Brincos = () => {
     },
     {
       id: "4086",
-      poster_path: "../public/imgs/Brincos/brincoPontoLuz.jpeg",
-      foto_about1: "../public/imgs/",
-      foto_about2: "./public/imgs/",
-      foto_about3: "./public/imgs/",
+      poster_path: "../public/imgs/Brincos/brincoPontoLuz.jpeg", 
       title: "BRINCO PRATA PONTO DE LUZ",
       disponivel: "sim",
       price: "49.99",

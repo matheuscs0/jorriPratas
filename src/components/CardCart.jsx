@@ -12,6 +12,7 @@ const CardCart = ({ item, onRemove }) => {
         <img src={item.poster_path} alt="" />
         <div className="priceTitle">
         <h3>{item.title}</h3>
+        <p>Tamanho: {item.size.size}</p>
         <p>Preço: R$ {item.size.price}</p>
         </div>
         <BiTrash onClick={handleRemoveItem} />

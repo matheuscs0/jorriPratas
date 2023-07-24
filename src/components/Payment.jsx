@@ -5,7 +5,10 @@ import TextField from '@mui/material/TextField';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Button } from '@mui/material';
-import './css/Payment.css'
+import './css/Payment.css';
+import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
+import emailjs from '@emailjs/browser'
+import {Link} from 'react-router-dom'
 
 
 export default function Payment({cep, address, city, state, number, complemento, onPreviousStep, cartItems, total}) {
@@ -15,17 +18,41 @@ export default function Payment({cep, address, city, state, number, complemento,
   const [exp_year, setExp_year] = useState('');
   const [cvv, setCvv] = useState('');
   const [cpf, setCpf] = useState('');
+  const [email, setEmail] = useState('');
+  const [paymentSuccess, setPaymentSuccess] = useState(false);
 
   const handleSubmit = async (event) => {
+    if (
+      nomeCartao === '' ||
+      cpf === '' ||
+      email === '' ||
+      numeroCartao === '' ||
+      exp_month === '' ||
+      exp_year === '' ||
+      cvv === ''
+    ) {
+      alert('Preencha todos os campos');
+      return;
+    }
+
+    sendEmail();
     event.preventDefault();
+
     const itemTitle = cartItems.map((item) => item.title);
+    const itemPrice = cartItems.map((item) => item.price)
     const totalWithoutSymbols = total.replace(/[.,]/g, '');
+    const itemSize = cartItems.map((item) => item.size.size)
+    const itemId = cartItems.map((item) => item.id)
+    console.log(itemId)
+    console.log(itemSize)
+    console.log(itemPrice)
     console.log(totalWithoutSymbols)
 
     try {
       const response = await axios.post('http://localhost:3000/PaymentController', {
         nomeCartao,
         cpf,
+        email,
         numeroCartao,
         exp_month,
         exp_year,
@@ -35,22 +62,72 @@ export default function Payment({cep, address, city, state, number, complemento,
         state,
         number, 
         complemento,
-        itemTitle, 
-        totalWithoutSymbols
+        itemTitle,
+        itemPrice,
+        totalWithoutSymbols, 
+        itemSize, 
+        itemId
       });
 
       console.log(response);
-      console.log(response.data.id);
+      console.log(response.id);
+      if(response.status === 200){
+        localStorage.setItem("paymentId", JSON.stringify({ id : response.id }));
+        setPaymentSuccess(true)
+      }
     } catch (error) {
-      console.error('Erro ao enviar pagamento:', error);
     }
+    function sendEmail(){
+      const itemTitle = cartItems.map((item) => item.title);
+      const itemSize = cartItems.map((item) => item.size.size);
+      const itemPrice = cartItems.map((item) => item.price);
+      const totalWithoutSymbols = total.replace(/[.,]/g, '');
+      const itemId = cartItems.map((item) => item.id)
+
+      const message = `
+       Id: ${itemId}.
+       Produtos: ${itemTitle}. 
+       Sizes: ${itemSize}. 
+       Preço: ${itemPrice}.
+       Total: ${totalWithoutSymbols}, dois ultimos número sendo os centávos.
+       Endereço: ${address}, ${city}, ${state}, Número: ${number}, Complemento: ${complemento}, ${cep}.
+       `
+      const templateParams = {
+        from_name: nomeCartao,
+        message: message ,
+        email: email,
+      }
+      emailjs.send("service_5gqygbm", "template_o4xviem", templateParams, "whjzz6VfAbbzUVi53" )
+      .then((response) => {
+        console.log('email enviado', response.status, response.text)
+        setNomeCartao('')
+        setCpf('')
+        setCvv('')
+        setEmail('')
+        setExp_month('')
+        setExp_year('')
+        setNumeroCartao('')
+      }, (erro) =>{
+        console.log("ERRO: ", erro)
+      })
+    }
+
   };
   const handleBack = () => {
-    onPreviousStep(); // Chama a função para voltar para a etapa anterior
+    onPreviousStep(); 
   };
-  
+
   return (
     <React.Fragment>
+      {paymentSuccess ? (
+      <div className='paymentConfirmed'>
+        <CheckCircleRoundedIcon size="large" className='svg-Icon'/>
+        <h2>Pagamento realizado com sucesso!</h2>
+        <p>Olá, seu pagamento foi realizado com sucesso e logo sera entregue!</p>
+        <p> Valor: R$ {total}</p>
+        <Link to='/'>Voltar</Link>
+      </div>
+    ) : (
       <Grid className='containerPayment'>
       <Typography variant="h6" gutterBottom>
         Pagamento
@@ -63,7 +140,7 @@ export default function Payment({cep, address, city, state, number, complemento,
             onChange={(event) => setNomeCartao(event.target.value)}
             label="Nome no cartão"
             fullWidth
-            autoComplete="cc-name"
+            autoComplete="Name"
             variant="standard"
           />
         </Grid>
@@ -74,7 +151,18 @@ export default function Payment({cep, address, city, state, number, complemento,
             onChange={(event) => setCpf(event.target.value)}
             label="CPF"
             fullWidth
-            autoComplete="cpf"
+            autoComplete="Cpf"
+            variant="standard"
+          />
+        </Grid> 
+        <Grid item xs={12} md={6}>
+          <TextField
+            required
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            label="Email"
+            fullWidth
+            autoComplete="Email"
             variant="standard"
           />
         </Grid>        
@@ -128,6 +216,7 @@ export default function Payment({cep, address, city, state, number, complemento,
       </Button>
       <Button variant="contained" onClick={handleSubmit} type='submit' size='small'>Enviar pagamento</Button>
       </Grid>
+       )}
     </React.Fragment>
   );
 }

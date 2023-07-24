@@ -133,323 +133,10 @@ const products = [
     ],
   },
   {
-    "id": "P300440",
-    "poster_path": "../public/imgs/Coração/poster_pulseiraCoracao.jpg",
-    "foto_about1": "../public/imgs/Coração/pulseira_coracao.jpeg",
-    "foto_about2": "../public/imgs/",
-    "foto_about3": "../public/imgs/",
-    "title": "PULSEIRA DE PRATA ELO CORAÇÃO",
-    "disponivel": "sim",
-    "price": " 54.90",
-    "sizes": [
-      { "size": "Padrão", "price": " 54.90" }
-    ]
-  },
-  {
-    "id": "P30031",
-    "poster_path": "../public/imgs/Singapura/poster_singapura.jpg",
-    "foto_about1": "../public/imgs/Singapura/pulseira_singapura.png",
-    "foto_about2": "../public/imgs/",
-    "foto_about3": "../public/imgs/",
-    "title": "PULSEIRA DE PRATA SINGAPURA",
-    "disponivel": "sim",
-    "price": "54.90",
-    "sizes": [
-      { "size": "Padrão", "price": " 54.90" }
-    ]
-  },
-  {
-    "id": "P30023",
-    "poster_path": "../public/imgs/Bolinha/poster_bolinha.jpg",
-    "foto_about1": "../public/imgs/Bolinha/pulseira_bolinha.jpeg",
-    "foto_about2": "../public/imgs/Bolinha/",
-    "foto_about3": "../public/imgs/Bolinha/",
-    "title": "PULSEIRA DE PRATA BOLINHA",
-    "disponivel": "sim",
-    "price": "54.90",
-    "sizes": [
-      { "size": "Padrão", "price": " 54.90" }
-    ]
-  },
-  {
-    "id": "7879",
-    "poster_path": "../public/imgs/Zirconia/pulseira_BrancoZirconia.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "../public/imgs/",
-    "foto_about3": "../public/imgs/",
-    "title": "PULSEIRA DE PRATA CORAÇÃO BRANCO ZIRCÔNIA",
-    "disponivel": "sim",
-    "price": "99.00",
-    "sizes": [
-      { "size": "Padrão", "price": " 99.00" }
-    ]
-  },
-  {
-    "id": "7802",
-    "poster_path": "../public/imgs/Zirconia/pulseira_CoracaoZirconia.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "../public/imgs/",
-    "foto_about3": "../public/imgs/",
-    "title": "PULSEIRA DE PRATA CORAÇÃO ZIRCÔNIA",
-    "disponivel": "sim",
-    "price": "119.00",
-    "sizes": [
-      { "size": "Padrão", "price": " 119.00" }
-    ]
-  },
-  {
-    "id": "7033",
-    "poster_path": "../public/imgs/Zirconia/pulseira_CristalZirconia.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "../public/imgs/",
-    "foto_about3": "../public/imgs/",
-    "title": "PULSEIRA DE PRATA CRISTAL ZIRCÔNIA",
-    "disponivel": "sim",
-    "price": "64.00",
-    "sizes": [
-      { "size": "Padrão", "price": " 64.00" }
-    ]
-  },
-  {
-    "id": "7224",
-    "poster_path": "../public/imgs/Riviera/pulsiera_GotasRiviera.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "../public/imgs/",
-    "foto_about3": "../public/imgs/",
-    "title": "PULSEIRA DE PRATA GOTAS DE CRISTAL RIVIERA",
-    "disponivel": "sim",
-    "price": "199.00",
-    "sizes": [
-      { "size": "Padrão", "price": " 199.00" }
-    ]
-  },
-  {
-    "id": "7223",
-    "poster_path": "../public/imgs/Riviera/pulseira_CristalRiviera.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "../public/imgs/",
-    "foto_about3": "../public/imgs/",
-    "title": "PULSEIRA DE PRATA CORAÇÃO CRISTAL RIVIERA",
-    "disponivel": "sim",
-    "price": "199.00",
-    "sizes": [
-      { "size": "Padrão", "price": " 199.00" }
-    ]
-  },
-  {
-    "id": "5033",
-    "poster_path": "../public/imgs/Star/pulseira_Star.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "../public/imgs/",
-    "foto_about3": "../public/imgs/",
-    "title": "PULSEIRA DE PRATA STAR",
-    "disponivel": "sim",
-    "price": "129.00",
-    "sizes": [
-      { "size": "Padrão", "price": " 129.00" }
-    ]
-  },
-  {
-    "id": "7334",
-    "poster_path": "../public/imgs/Cruz/pulseira_Cruz.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "../public/imgs/",
-    "foto_about3": "../public/imgs/",
-    "title": "PULSEIRA DE PRATA CRUZ",
-    "disponivel": "sim",
-    "price": "149.00",
-    "sizes": [
-      { "size": "Padrão", "price": " 149.00" }
-    ]
-  },
-  {
-    "id": "7311",
-    "poster_path": "../public/imgs/Tiempo/pulseiraQuadradaTiempo.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "../public/imgs/",
-    "foto_about3": "../public/imgs/",
-    "title": "PULSEIRA DE PRATA TIEMPO FIO QUADRADO",
-    "disponivel": "sim",
-    "price": "99.00",
-    "sizes": [
-      { "size": "Padrão", "price": " 99.00" }
-    ]
-  },
-  {
-    "id": "7312",
-    "poster_path": "../public/imgs/Tiempo/pulseiraRedondaTiempo.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "../public/imgs/",
-    "foto_about3": "../public/imgs/",
-    "title": "BRACELETE DE PRATA TIEMPO FIO REDONDO",
-    "disponivel": "sim",
-    "price": "99.00",
-    "sizes": [
-      { "size": "Padrão", "price": " 99.00" }
-    ]
-  },
-  {
-    "id": "7312",
-    "poster_path": "../public/imgs/Tiempo/pulseira_TiempoTorcido.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "../public/imgs/",
-    "foto_about3": "../public/imgs/",
-    "title": "BRACELETE DE PRATA TIEMPO FIO TORCIDO",
-    "disponivel": "sim",
-    "price": "99.00",
-    "sizes": [
-      { "size": "Padrão", "price": " 99.00" }
-    ]
-  },
-  {
-    id: "T300440",
-    poster_path: "../public/imgs/Coração/poster_pulseiraCoracao.jpg",
-    foto_about1: "../public/imgs/Coração/tornozeleira_coracao.jpeg",
-    foto_about2: "./public/imgs/",
-    foto_about3: "./public/imgs/",
-    title: "TORNOZELEIRA DE PRATA ELO CORAÇÃO",
-    disponivel: "sim",
-    price: "77.90",
-    sizes: [
-      { size: "Padrão", price: " 77.90" },
-    ],
-  },
-  {
-    id: "T30031",
-    poster_path: "../public/imgs/Singapura/poster_singapura.jpg",
-    foto_about1: "../public/imgs/Singapura/tornozeleira_singapura.png",
-    foto_about2: "./public/imgs/",
-    foto_about3: "./public/imgs/",
-    title: "TORNOZELEIRA DE PRATA SINGAPURA",
-    disponivel: "sim",
-    price: "77.90",
-    sizes: [
-      { size: "Padrão", price: " 77.90" },
-    ],
-  },
-  {
-    id: "T30023",
-    poster_path: "../public/imgs/Bolinha/poster_bolinha.jpg",
-    foto_about1: "../public/imgs/Bolinha/tornozeleira_bolinha.jpg",
-    foto_about2: "./public/imgs/Bolinha/",
-    foto_about3: "./public/imgs/Bolinha/",
-    title: "TORNOZELEIRA DE PRATA BOLINHA",
-    disponivel: "sim",
-    price: "77.90",
-    sizes: [
-      { size: "Padrão", price: " 77.90" },
-    ],
-  },
-  {
-    id: "5659",
-    poster_path: "../public/imgs/Brincos/brincoCoracao.jpeg",
-    foto_about1: "../public/imgs/",
-    foto_about2: "./public/imgs/",
-    foto_about3: "./public/imgs/",
-    title: "BRINCO PRATA CORAÇÃO",
-    disponivel: "sim",
-    price: "39.99",
-    sizes: [
-      { size: "Unico", price: " 39.99" },
-    ],
-  },
-  {
-    id: "5908",
-    poster_path: "../public/imgs/Brincos/brincoFlor.jpeg",
-    foto_about1: "../public/imgs/",
-    foto_about2: "./public/imgs/",
-    foto_about3: "./public/imgs/",
-    title: "BRINCO PRATA FLOR",
-    disponivel: "sim",
-    price: "39.99",
-    sizes: [
-      { size: "Unico", price: " 39.99" },
-    ],
-  },
-  {
-    id: "6839",
-    poster_path: "../public/imgs/Brincos/brincoCobra.jpeg",
-    foto_about1: "../public/imgs/",
-    foto_about2: "./public/imgs/",
-    foto_about3: "./public/imgs/",
-    title: "BRINCO PRATA COBRA",
-    disponivel: "sim",
-    price: "39.99",
-    sizes: [
-      { size: "Unico", price: " 39.99" },
-    ],
-  },
-  {
-    id: "6815",
-    poster_path: "../public/imgs/Brincos/brincoTrevo.jpeg",
-    foto_about1: "../public/imgs/",
-    foto_about2: "./public/imgs/",
-    foto_about3: "./public/imgs/",
-    title: "BRINCO PRATA TREVO",
-    disponivel: "sim",
-    price: "39.99",
-    sizes: [
-      { size: "Unico", price: " 39.99" },
-    ],
-  },
-  {
-    id: "5656",
-    poster_path: "../public/imgs/Brincos/brincoConcha.jpeg",
-    foto_about1: "../public/imgs/",
-    foto_about2: "./public/imgs/",
-    foto_about3: "./public/imgs/",
-    title: "BRINCO PRATA CONCHA",
-    disponivel: "sim",
-    price: "39.99",
-    sizes: [
-      { size: "Unico", price: " 39.99" },
-    ],
-  },
-  {
-    id: "4069",
-    poster_path: "../public/imgs/Brincos/brincoMeiaLua.jpeg",
-    foto_about1: "../public/imgs/",
-    foto_about2: "./public/imgs/",
-    foto_about3: "./public/imgs/",
-    title: "BRINCO PRATA MEIA LUA",
-    disponivel: "sim",
-    price: "39.99",
-    sizes: [
-      { size: "Unico", price: " 39.99" },
-    ],
-  },
-  {
-    id: "2034",
-    poster_path: "../public/imgs/Brincos/brincoPage.jpeg",
-    foto_about1: "../public/imgs/",
-    foto_about2: "./public/imgs/",
-    foto_about3: "./public/imgs/",
-    title: "BRINCO PRATA TREVO",
-    disponivel: "sim",
-    price: "39.99",
-    sizes: [
-      { size: "Unico", price: " 29.99" },
-    ],
-  },
-  {
-    id: "4086",
-    poster_path: "../public/imgs/Brincos/brincoPontoLuz.jpeg",
-    foto_about1: "../public/imgs/",
-    foto_about2: "./public/imgs/",
-    foto_about3: "./public/imgs/",
-    title: "BRINCO PRATA PONTO DE LUZ",
-    disponivel: "sim",
-    price: "49.99",
-    sizes: [
-      { size: "Unico", price: " 49.99" },
-    ],
-  },
-  {
     "id": "8403",
     "poster_path": "../public/imgs/Aneis/anel1.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "./public/imgs/",
-    "foto_about3": "./public/imgs/",
+    
+    
     "title": "ANEL PRATA SOLITÁRIO",
     "disponivel": "sim",
     "price": "89.00",
@@ -464,9 +151,6 @@ const products = [
   {
     "id": "4878",
     "poster_path": "../public/imgs/Aneis/anel2.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "./public/imgs/",
-    "foto_about3": "./public/imgs/",
     "title": "ANEL PRATA SOLITÁRIO",
     "disponivel": "sim",
     "price": "89.00",
@@ -481,9 +165,6 @@ const products = [
   {
     "id": "5169",
     "poster_path": "../public/imgs/Aneis/anel3.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "./public/imgs/",
-    "foto_about3": "./public/imgs/",
     "title": "ANEL PRATA SOLITÁRIO",
     "disponivel": "sim",
     "price": "99.99",
@@ -499,9 +180,6 @@ const products = [
   {
     "id": "3641",
     "poster_path": "../public/imgs/Aneis/anel4.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "./public/imgs/",
-    "foto_about3": "./public/imgs/",
     "title": "ANEL PRATA SOLITÁRIO",
     "disponivel": "sim",
     "price": "119.99",
@@ -516,9 +194,6 @@ const products = [
   {
     "id": "3662",
     "poster_path": "../public/imgs/Aneis/anel5.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "./public/imgs/",
-    "foto_about3": "./public/imgs/",
     "title": "ANEL PRATA SOLITÁRIO",
     "disponivel": "sim",
     "price": "99.99",
@@ -534,135 +209,357 @@ const products = [
   {
     "id": "5731",
     "poster_path": "../public/imgs/Aneis/anel6.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "./public/imgs/",
-    "foto_about3": "./public/imgs/",
     "title": "ANEL PRATA SOLITÁRIO",
     "disponivel": "sim",
     "price": "119.99",
     "sizes": [
-      { "size": "12", "price": "119.99" },
-      { "size": "14", "price": "119.99" },
-      { "size": "16", "price": "119.99" },
-      { "size": "18", "price": "119.99" },
-      { "size": "20", "price": "119.99" },
-      { "size": "22", "price": "119.99" }
+      { "size": "12", "price": " 119.99" },
+      { "size": "14", "price": " 119.99" },
+      { "size": "16", "price": " 119.99" },
+      { "size": "18", "price": " 119.99" },
+      { "size": "20", "price": " 119.99" },
+      { "size": "22", "price": " 119.99" }
     ]
   },
   {
     "id": "4906",
     "poster_path": "../public/imgs/Aneis/anel7.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "./public/imgs/",
-    "foto_about3": "./public/imgs/",
     "title": "ANEL PRATA SOLITÁRIO",
     "disponivel": "sim",
     "price": "119.99",
     "sizes": [
-      { "size": "12", "price": "119.99" },
-      { "size": "15", "price": "119.99" }
+      { "size": "12", "price": " 119.99" },
+      { "size": "15", "price": " 119.99" }
     ]
   },
   {
     "id": "4881",
     "poster_path": "../public/imgs/Aneis/anel8.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "./public/imgs/",
-    "foto_about3": "./public/imgs/",
     "title": "ANEL PRATA SOLITÁRIO",
     "disponivel": "sim",
     "price": "119.99",
     "sizes": [
-      { "size": "12", "price": "119.99" },
-      { "size": "14", "price": "119.99" },
-      { "size": "16", "price": "119.99" },
-      { "size": "18", "price": "119.99" },
-      { "size": "20", "price": "119.99" }
+      { "size": "12", "price": " 119.99" },
+      { "size": "14", "price": " 119.99" },
+      { "size": "16", "price": " 119.99" },
+      { "size": "18", "price": " 119.99" },
+      { "size": "20", "price": " 119.99" }
     ]
   },
   {
     "id": "5041",
     "poster_path": "../public/imgs/Aneis/anel9.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "./public/imgs/",
-    "foto_about3": "./public/imgs/",
     "title": "ANEL PRATA SOLITÁRIO",
     "disponivel": "sim",
     "price": "119.99",
     "sizes": [
-      { "size": "12", "price": "119.99" },
-      { "size": "14", "price": "119.99" },
-      { "size": "16", "price": "119.99" },
-      { "size": "18", "price": "119.99" },
-      { "size": "20", "price": "119.99" },
-      { "size": "22", "price": "119.99" }
+      { "size": "12", "price": " 119.99" },
+      { "size": "14", "price": " 119.99" },
+      { "size": "16", "price": " 119.99" },
+      { "size": "18", "price": " 119.99" },
+      { "size": "20", "price": " 119.99" },
+      { "size": "22", "price": " 119.99" }
     ]
   },
   {
     "id": "5041",
     "poster_path": "../public/imgs/Aneis/anel10.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "./public/imgs/",
-    "foto_about3": "./public/imgs/",
     "title": "ANEL PRATA SOLITÁRIO",
     "disponivel": "sim",
     "price": "119.99",
     "sizes": [
-      { "size": "12", "price": "119.99" },
-      { "size": "14", "price": "119.99" },
-      { "size": "16", "price": "119.99" },
-      { "size": "18", "price": "119.99" },
-      { "size": "20", "price": "119.99" },
-      { "size": "22", "price": "119.99" }
+      { "size": "12", "price": " 119.99" },
+      { "size": "14", "price": " 119.99" },
+      { "size": "16", "price": " 119.99" },
+      { "size": "18", "price": " 119.99" },
+      { "size": "20", "price": " 119.99" },
+      { "size": "22", "price": " 119.99" }
     ]
   },
   {
     "id": "6811",
     "poster_path": "../public/imgs/Aneis/anelCoracaoCheio.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "./public/imgs/",
-    "foto_about3": "./public/imgs/",
     "title": "ANEL PRATA CORAÇÃO CHEIO",
     "disponivel": "sim",
     "price": "89.00",
     "sizes": [
-      { "size": "12", "price": "89.00" },
-      { "size": "13", "price": "89.00" },
-      { "size": "15", "price": "89.00" }
+      { "size": "12", "price": " 89.00" },
+      { "size": "13", "price": " 89.00" },
+      { "size": "15", "price": " 89.00" }
     ]
   },
   {
     "id": "7256",
     "poster_path": "../public/imgs/Aneis/anelPrataCorrente.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "./public/imgs/",
-    "foto_about3": "./public/imgs/",
     "title": "ANEL PRATA CORRENTE",
     "disponivel": "sim",
     "price": "99.99",
     "sizes": [
-      { "size": "12", "price": "99.99" },
-      { "size": "14", "price": "99.99" },
-      { "size": "16", "price": "99.99" },
-      { "size": "18", "price": "99.99" },
-      { "size": "20", "price": "99.99" },
-      { "size": "22", "price": "99.99" }
+      { "size": "12", "price": " 99.99" },
+      { "size": "14", "price": " 99.99" },
+      { "size": "16", "price": " 99.99" },
+      { "size": "18", "price": " 99.99" },
+      { "size": "20", "price": " 99.99" },
+      { "size": "22", "price": " 99.99" }
     ]
   },
   {
     "id": "6811",
     "poster_path": "../public/imgs/Aneis/anelLiso.jpeg",
-    "foto_about1": "../public/imgs/",
-    "foto_about2": "./public/imgs/",
-    "foto_about3": "./public/imgs/",
     "title": "ANEL PRATA CORAÇÃO LISO",
     "disponivel": "sim",
     "price": "79.00",
     "sizes": [
-      { "size": "12", "price": "79.00" },
-      { "size": "13", "price": "79.00" },
-      { "size": "15", "price": "79.00" }
+      { "size": "12", "price": " 79.00" },
+      { "size": "13", "price": " 79.00" },
+      { "size": "15", "price": " 79.00" }
     ]
+  }, 
+  {
+    id: "5659",
+    poster_path: "../public/imgs/Brincos/brincoCoracao.jpeg",
+    title: "BRINCO PRATA CORAÇÃO",
+    disponivel: "sim",
+    price: "39.99",
+    sizes: [
+      { size: "Unico", price: "39.99" },
+    ],
+  },
+  {
+    id: "5908",
+    poster_path: "../public/imgs/Brincos/brincoFlor.jpeg",
+    title: "BRINCO PRATA FLOR",
+    disponivel: "sim",
+    price: "39.99",
+    sizes: [
+      { size: "Unico", price: "39.99" },
+    ],
+  },
+  {
+    id: "6839",
+    poster_path: "../public/imgs/Brincos/brincoCobra.jpeg",
+    title: "BRINCO PRATA COBRA",
+    disponivel: "sim",
+    price: "39.99",
+    sizes: [
+      { size: "Unico", price: "39.99" },
+    ],
+  },
+  {
+    id: "6815",
+    poster_path: "../public/imgs/Brincos/brincoTrevo.jpeg",
+    title: "BRINCO PRATA TREVO",
+    disponivel: "sim",
+    price: "39.99",
+    sizes: [
+      { size: "Unico", price: "39.99" },
+    ],
+  },
+  {
+    id: "5656",
+    poster_path: "../public/imgs/Brincos/brincoConcha.jpeg",
+    title: "BRINCO PRATA CONCHA",
+    disponivel: "sim",
+    price: "39.99",
+    sizes: [
+      { size: "Unico", price: "39.99" },
+    ],
+  },
+  {
+    id: "4069",
+    poster_path: '../public/imgs/Brincos/brincoMeiaLua.jpeg',
+    title: "BRINCO PRATA MEIA LUA",
+    disponivel: "sim",
+    price: "39.99",
+    sizes: [
+      { size: "Unico", price: "39.99" },
+    ],
+  },
+  {
+    id: "2034",
+    poster_path: "../public/imgs/Brincos/brincoPage.jpeg",
+    title: "BRINCO PRATA TREVO",
+    disponivel: "sim",
+    price: "39.99",
+    sizes: [
+      { size: "Unico", price: "29.99" },
+    ],
+  },
+  {
+    id: "4086",
+    poster_path: "../public/imgs/Brincos/brincoPontoLuz.jpeg", 
+    title: "BRINCO PRATA PONTO DE LUZ",
+    disponivel: "sim",
+    price: "49.99",
+    sizes: [
+      { size: "Unico", price: "49.99" },
+    ],
+  },
+  {
+    "id": "P300440",
+    "poster_path": "../public/imgs/Coração/poster_pulseiraCoracao.jpg",
+    "foto_about1": "../public/imgs/Coração/pulseira_coracao.jpeg",
+    "title": "PULSEIRA DE PRATA ELO CORAÇÃO",
+    "disponivel": "sim",
+    "price": "54.90",
+    "sizes": [
+      { "size": "Padrão", "price": "54.90" }
+    ]
+  },
+  {
+    "id": "P30031",
+    "poster_path": "../public/imgs/Singapura/poster_singapura.jpg",
+    "foto_about1": "../public/imgs/Singapura/pulseira_singapura.png",
+    "title": "PULSEIRA DE PRATA SINGAPURA",
+    "disponivel": "sim",
+    "price": "54.90",
+    "sizes": [
+      { "size": "Padrão", "price": "54.90" }
+    ]
+  },
+  {
+    "id": "P30023",
+    "poster_path": "../public/imgs/Bolinha/poster_bolinha.jpg",
+    "foto_about1": "../public/imgs/Bolinha/pulseira_bolinha.jpeg",
+    "title": "PULSEIRA DE PRATA BOLINHA",
+    "disponivel": "sim",
+    "price": "54.90",
+    "sizes": [
+      { "size": "Padrão", "price": "54.90" }
+    ]
+  },
+  {
+    "id": "7879",
+    "poster_path": "../public/imgs/Zirconia/pulseira_BrancoZirconia.jpeg",
+    "title": "PULSEIRA DE PRATA CORAÇÃO BRANCO ZIRCÔNIA",
+    "disponivel": "sim",
+    "price": "99.00",
+    "sizes": [
+      { "size": "Padrão", "price": "99.00" }
+    ]
+  },
+  {
+    "id": "7802",
+    "poster_path": "../public/imgs/Zirconia/pulseira_CoracaoZirconia.jpeg",
+    "title": "PULSEIRA DE PRATA CORAÇÃO ZIRCÔNIA",
+    "disponivel": "sim",
+    "price": "119.00",
+    "sizes": [
+      { "size": "Padrão", "price": "119.00" }
+    ]
+  },
+  {
+    "id": "7033",
+    "poster_path": "../public/imgs/Zirconia/pulseira_CristalZirconia.jpeg",
+    "title": "PULSEIRA DE PRATA CRISTAL ZIRCÔNIA",
+    "disponivel": "sim",
+    "price": "64.00",
+    "sizes": [
+      { "size": "Padrão", "price": "64.00" }
+    ]
+  },
+  {
+    "id": "7224",
+    "poster_path": "../public/imgs/Riviera/pulsiera_GotasRiviera.jpeg",
+    "title": "PULSEIRA DE PRATA GOTAS DE CRISTAL RIVIERA",
+    "disponivel": "sim",
+    "price": "199.00",
+    "sizes": [
+      { "size": "Padrão", "price": "199.00" }
+    ]
+  },
+  {
+    "id": "7223",
+    "poster_path": "../public/imgs/Riviera/pulseira_CristalRiviera.jpeg",
+    "title": "PULSEIRA DE PRATA CORAÇÃO CRISTAL RIVIERA",
+    "disponivel": "sim",
+    "price": "199.00",
+    "sizes": [
+      { "size": "Padrão", "price": "199.00" }
+    ]
+  },
+  {
+    "id": "5033",
+    "poster_path": "../public/imgs/Star/pulseira_Star.jpeg",
+    "title": "PULSEIRA DE PRATA STAR",
+    "disponivel": "sim",
+    "price": "129.00",
+    "sizes": [
+      { "size": "Padrão", "price": "129.00" }
+    ]
+  },
+  {
+    "id": "7334",
+    "poster_path": "../public/imgs/Cruz/pulseira_Cruz.jpeg",
+    "title": "PULSEIRA DE PRATA CRUZ",
+    "disponivel": "sim",
+    "price": "149.00",
+    "sizes": [
+      { "size": "Padrão", "price": "149.00" }
+    ]
+  },
+  {
+    "id": "7311",
+    "poster_path": "../public/imgs/Tiempo/pulseiraQuadradaTiempo.jpeg",
+    "title": "PULSEIRA DE PRATA TIEMPO FIO QUADRADO",
+    "disponivel": "sim",
+    "price": "99.00",
+    "sizes": [
+      { "size": "Padrão", "price": "99.00" }
+    ]
+  },
+  {
+    "id": "7312",
+    "poster_path": "../public/imgs/Tiempo/pulseiraRedondaTiempo.jpeg",
+    "title": "BRACELETE DE PRATA TIEMPO FIO REDONDO",
+    "disponivel": "sim",
+    "price": "99.00",
+    "sizes": [
+      { "size": "Padrão", "price": "99.00" }
+    ]
+  },
+  {
+    "id": "7312",
+    "poster_path": "../public/imgs/Tiempo/pulseira_TiempoTorcido.jpeg",
+    "title": "BRACELETE DE PRATA TIEMPO FIO TORCIDO",
+    "disponivel": "sim",
+    "price": "99.00",
+    "sizes": [
+      { "size": "Padrão", "price": "99.00" }
+    ]
+  },
+  {
+    id: "T300440",
+    poster_path: "../public/imgs/Coração/poster_pulseiraCoracao.jpg",
+    foto_about1: "../public/imgs/Coração/tornozeleira_coracao.jpeg",
+    title: "TORNOZELEIRA DE PRATA ELO CORAÇÃO",
+    disponivel: "sim",
+    price: "77.90",
+    sizes: [
+      { size: "Padrão", price: " 77.90" },
+    ],
+  },
+  {
+    id: "T30031",
+    poster_path: "../public/imgs/Singapura/poster_singapura.jpg",
+    foto_about1: "../public/imgs/Singapura/tornozeleira_singapura.png",
+    title: "TORNOZELEIRA DE PRATA SINGAPURA",
+    disponivel: "sim",
+    price: "77.90",
+    sizes: [
+      { size: "Padrão", price: " 77.90" },
+    ],
+  },
+  {
+    id: "T30023",
+    poster_path: "../public/imgs/Bolinha/poster_bolinha.jpg",
+    foto_about1: "../public/imgs/Bolinha/tornozeleira_bolinha.jpg",
+    title: "TORNOZELEIRA DE PRATA BOLINHA",
+    disponivel: "sim",
+    price: "77.90",
+    sizes: [
+      { size: "Padrão", price: " 77.90" },
+    ],
   },
 ]
 
