@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Nav from "../components/Nav";
-import NavFreteGratis from "../components/navFreteGratis";
+import Nav from '../components/Nav/Nav'
+import NavFreteGratis from '../components/navFreteGratis/navFreteGratis'
 import Cookies from "js-cookie";
-import ResumeFinish from "../components/ResumeFinish";
-import ConsultaCep from '../components/consultaCep';
-import Payment from '../components/Payment';
+import ResumeFinish from "../components/ResumeFinish/ResumeFinish";
+import ConsultaCep from  '../components/ConsultaCep/consultaCep'
+import Payment from '../components/Payment/Payment';
 import { ProgressBar, Step } from 'react-step-progress-bar';
 import 'react-step-progress-bar/styles.css';
 import './css/ProgressBar.css'

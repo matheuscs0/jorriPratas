@@ -1,4 +1,4 @@
-import ProductCard from "../ProductCard";
+import ProductCard from "../ProductCart/ProductCard";
 
 const Tornozeleira = () => {
   const products =[

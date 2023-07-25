@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import products from '../components/data/products';
-import DetailsCard from '../components/DetailsCard';
-import DropdownMenu from '../components/DropdownMenu';
-import NavFreteGratis from '../components/navFreteGratis';
-import NavBar from '../components/NavBar';
-import LoginModal from '../components/LoginModal';
-import CarrinhoDeCompras from '../components/CarrinhoDeCompras.jsx';
+import DetailsCard from '../components/DetailsCard/DetailsCard';
+import DropdownMenu from '../components/DropdownMenu/DropdownMenu';
+import NavFreteGratis from '../components/navFreteGratis/navFreteGratis';
+import NavBar from '../components/NavBar/NavBar';
+import LoginModal from '../components/Login/LoginModal';
+import CarrinhoDeCompras from '../components/CarrinhoDeCompras/CarrinhoDeCompras';
 import Cookies from 'js-cookie';
 
 const ProductDetail = () => {
@@ -66,7 +66,10 @@ const ProductDetail = () => {
         setCartItems={setCartItems}
       />
       {showLoginModal && <LoginModal onClose={handleCloseModal} />}
-      <DropdownMenu />
+      <div>
+        <DropdownMenu />
+      </div>
+     
       <DetailsCard product={product} onAddToCart={addToCart} />
       {showSidebar && cartItems.length > 0 && (
         <div className="sidebar">

@@ -1,12 +1,11 @@
 import React from 'react';
-import TabelaCompras from '../components/TabelaCompras';
+import TabelaCompras from '../components/TabelaCompras/TabelaCompras';
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
-import Nav from '../components/Nav';
-import NavFreteGratis from '../components/navFreteGratis';
+import Nav from '../components/Nav/Nav';
+import NavFreteGratis from '../components/navFreteGratis/navFreteGratis';
 import './css/resumeCompra.css';
-import Resume from '../components/Resume';
-import Cep from '../components/cep';
+import Resume from '../components/Resume/Resume';
 
 const CardResume = () => {
   const [cartItems, setCartItems] = useState([]);

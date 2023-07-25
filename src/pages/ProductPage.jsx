@@ -3,15 +3,15 @@ import './css/ProductPage.css'
 import Colar from "../components/Catalogos/Colar";
 import Pulseiras from "../components/Catalogos/Pulseiras";
 import Tornozeleira from '../components/Catalogos/Tornozeleira' 
-import DropdownMenu from "../components/DropdownMenu";
-import NavFreteGratis from "../components/navFreteGratis";
-import NavBar from "../components/NavBar";
+import DropdownMenu from "../components/DropdownMenu/DropdownMenu";
+import NavFreteGratis from "../components/navFreteGratis/navFreteGratis";
+import NavBar from "../components/NavBar/NavBar";
 import { useState, useEffect } from 'react'
 import Cookies from "js-cookie";
-import LoginModal from '../components/LoginModal'
+import LoginModal from '../components/Login/LoginModal'
 import Aneis from "../components/Catalogos/Aneis";
 import Brincos from "../components/Catalogos/Brincos";
-import CarrinhoDeCompras from "../components/CarrinhoDeCompras";
+import CarrinhoDeCompras from "../components/CarrinhoDeCompras/CarrinhoDeCompras";
 
 const ProductPage = () => {
   const { type } = useParams();
@@ -83,7 +83,9 @@ const ProductPage = () => {
         setCartItems={setCartItems}
     />
       {showLoginModal && <LoginModal onClose={handleCloseModal} />}
-  <DropdownMenu />
+  <div className="dropdownMenu">
+    <DropdownMenu />
+  </div>
   {showSidebar && cartItems.length > 0 && (
         <div className="sidebar">
           <CarrinhoDeCompras

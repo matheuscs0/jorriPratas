@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import ColarSwiper from '../components/ColarSwiper';
-import DropdownMenu from '../components/DropdownMenu';
-import NavBar from '../components/NavBar';
-import FooterDetails from '../components/footerDetails';
-import NavFreteGratis from '../components/navFreteGratis';
-import LoginModal from '../components/LoginModal';
+import ColarSwiper from '../components/ColarSwiper/ColarSwiper';
+import DropdownMenu from '../components/DropdownMenu/DropdownMenu';
+import NavBar from '../components/NavBar/NavBar';
+import FooterDetails from '../components/footerDetails/footerDetails';
+import NavFreteGratis from '../components/navFreteGratis/navFreteGratis';
+import LoginModal from '../components/Login/LoginModal';
 import Cookies from 'js-cookie';
-import CarrinhoDeCompras from '../components/CarrinhoDeCompras';
+import CarrinhoDeCompras from '../components/CarrinhoDeCompras/CarrinhoDeCompras';
 import './css/home.css'
+import SearchInput from '../components/SearchInput/SearchInput';
 
 const Home = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -61,6 +62,9 @@ const Home = () => {
         cartItems={cartItems}
         setCartItems={setCartItems}
       />
+      </div>
+      <div className="searchInput">
+        <SearchInput />
       </div>
       {showLoginModal && <LoginModal onClose={handleCloseModal} />}
       <DropdownMenu />

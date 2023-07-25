@@ -3,13 +3,13 @@ import { useEffect } from 'react';
 import Cookies from 'js-cookie';
 import { useLocation } from 'react-router-dom';
 import products from '../components/data/products';
-import ProductCard from '../components/ProductCard';
-import NavFreteGratis from '../components/navFreteGratis';
-import NavBar from '../components/NavBar';
+import ProductCard from '../components/ProductCart/ProductCard';
+import NavFreteGratis from '../components/navFreteGratis/navFreteGratis';
+import NavBar from '../components/NavBar/NavBar';
 import './css/ProductPage.css'
-import LoginModal from '../components/LoginModal'
+import LoginModal from '../components/Login/LoginModal'
 import { useState } from 'react'
-import CarrinhoDeCompras from '../components/CarrinhoDeCompras';
+import CarrinhoDeCompras from '../components/CarrinhoDeCompras/CarrinhoDeCompras';
 
 const Search = () => {
   const [cartItems, setCartItems] = useState([]);

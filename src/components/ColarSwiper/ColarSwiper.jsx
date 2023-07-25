@@ -1,7 +1,39 @@
-import ProductCard from "../ProductCart/ProductCard";
-import '../ProductCart/ProductCard.css'
+import { Swiper, SwiperSlide} from 'swiper/react'
+import 'swiper/css';
+import './Swiper.css'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
-const Colar = () => {
+const ColarSwiper = () => {
+  const [slidesPerView, setSlidePerView] = useState(3)
+
+  useEffect(() => {
+    function handleResize() {
+      const windowWidth = window.innerWidth;
+      console.log('Window Width:', windowWidth);
+  
+      switch (true) {
+        case windowWidth < 500:
+          setSlidePerView(1);
+          break;
+       
+        default:
+          setSlidePerView(3); 
+        break;
+      }
+    }
+  
+    handleResize(); // Chamada inicial para definir o número de slides de acordo com a largura atual da janela
+  
+    window.addEventListener("resize", handleResize); // Adiciona um ouvinte de redimensionamento para atualizar o número de slides quando a janela for redimensionada
+  
+    return () => {
+      window.removeEventListener("resize", handleResize); // Remove o ouvinte de redimensionamento ao desmontar o componente
+    };
+  }, []);
+  
+  
+  
 
   const products = [
     {
@@ -139,15 +171,34 @@ const Colar = () => {
     },
   ];
   return (
-    <div className='productContainer'>
-      {products.map((product) => (
-        
-            <ProductCard key={product.id} product={product} className="slide-item" />
-        
-      ))}
-  
+    <div className='rowContainer'>
+      <Swiper
+      slidesPerView={slidesPerView}
+      spaceBetween={0}
+      scrollbar={{ draggable: true }}
+      pagination={{ clickable: true }}
+      navigation
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+      className='swiper'
+      >
+        {products.map((product) => (
+          <SwiperSlide key={product.id} className='swiperSlide'
+          width={290}
+          >
+            <div className='cardProduct'>
+            <Link to={`/product/${product.id}`}>
+              <img src={product.poster_path} alt={product.title} />
+              <h2>{product.title}</h2>
+              <p>R$ {product.price}</p>
+              <button>VER DETALHES</button>
+            </Link>
+            </div>
+          </SwiperSlide>
+         ))}
+      </Swiper>
     </div>
   );
 };
 
-export default Colar
+export default ColarSwiper

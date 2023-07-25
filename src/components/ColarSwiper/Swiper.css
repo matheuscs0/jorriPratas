@@ -1,0 +1,32 @@
+.rowContainer{
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+.swiper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.swiperSlide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.swiper-slide swiperSlide{
+  width: 298px;
+}
+.rowContainer .swiper-button-next::after,
+.rowContainer .swiper-button-prev::after {
+  color: #333;
+}
