@@ -1,0 +1,81 @@
+.ContainerSidebar{
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  color: aliceblue;
+  background-color: #181717;
+  position: absolute;
+  height: 100vh;
+  width:300px;
+  top: 0;
+  left: 0;
+  animation: showSideBar .4s;
+  flex-direction: column;
+}
+.close {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.close svg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+.DropdownLi2{
+  flex-direction: column;
+  display: flex;
+  margin-top: 3rem;
+  list-style: none;
+  padding: 1rem;
+  gap: 1rem;
+}
+.account{
+  display: flex;
+  justify-content: left;
+  padding: 1rem;
+  background-color: #111111;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.897);
+  border-radius: 20px;
+  bottom: 0;
+  margin-top: 12rem;
+  height: 25%;
+}
+.account svg{
+  display: flex;
+  margin-left: 1rem;
+}
+.account p{
+  margin-left: 3.5rem;
+  display: flex;
+  margin-top: 0.3rem;
+  cursor: pointer;
+}
+.DropdownLi2 li, .DropdownLi2 a{
+  display: flex;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: #fff;
+}
+@keyframes showSideBar {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to{
+    opacity: 1;
+    width: 300px;
+  }
+  
+}

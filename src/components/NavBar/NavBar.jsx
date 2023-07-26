@@ -7,6 +7,8 @@ import SearchInput from '../SearchInput/SearchInput';
 import CarrinhoDeCompras from '../CarrinhoDeCompras/CarrinhoDeCompras';
 import '../CarrinhoDeCompras/CarrinhoDeCompras.css'
 import { useEffect } from 'react';
+import Header from '../Header/index';
+
 
 const NavBar = ({ onLoginClick, onOpenSidebar, onClose }) => {
   const navigate = useNavigate();
@@ -39,6 +41,9 @@ const NavBar = ({ onLoginClick, onOpenSidebar, onClose }) => {
 
   return (
     <nav className="navBar">
+      <div className='Header1'>
+       <Header/>
+      </div>
       <Link to="/">
         <div className="logo">
           <img src="../public/imgs/Logo/logo_jorri.png" alt="" />
@@ -48,7 +53,7 @@ const NavBar = ({ onLoginClick, onOpenSidebar, onClose }) => {
         <SearchInput onSearch={handleSearch} />
       </div>
       <div className="svgs">
-        <VscAccount onClick={onLoginClick} />
+        <VscAccount onClick={onLoginClick}  className='LoginSvg'/>
         <HiShoppingBag onClick={handleClick} alt="Carrinho"/> 
       </div>
       {showSidebar && (

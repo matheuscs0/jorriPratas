@@ -11,7 +11,7 @@ O objetivo deste projeto é criar um E-commerce funcional com uma navegação co
 - Páginas dinâmicas para visualização de produtos
 - Navegação completa utilizando o React-Router-Dom
 - Página de detalhes do produto
-- Sistema de pagamento (em desenvolvimento)
+- Sistema de pagamento
 - Cálculo de frete (em desenvolvimento)
 - Sistema de login (em desenvolvimento)
 

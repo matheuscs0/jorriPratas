@@ -32,6 +32,9 @@
   align-items: center;
   gap: 20px;
 }
+.Header1{
+  display: none;
+}
 .svgs svg{
   display: flex;
   color: #ffffff;
@@ -49,6 +52,12 @@
     width: 150px;
     height: 100px;
     object-fit: contain;
+  }
+  .Header1{
+    display: flex;
+  }
+  .LoginSvg{
+    display: none;  
   }
 }
 
