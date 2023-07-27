@@ -1,0 +1,86 @@
+.containerImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10rem;
+  margin-top: 5rem;
+}
+.imgHover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 2% 40% 10% 30%;
+}
+.imgHover img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  transition: transform 500ms;
+}
+.imgHover:hover{
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.37);
+  transition: 0.5s ease-in-out;
+}
+.imgHover img:hover{
+  display: flex;
+  transform: scale(1.1);
+}
+.pImage{
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  max-width: 400px;
+}
+.pImage h2{
+  font-size: 30px;
+}
+.pImage p{
+  font-size: 20px;
+}
+.pImage span{
+  font-weight: 700;
+}
+.pImage a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1rem;
+  background-color: #181717;
+  width: 150px;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+.pImage a:hover{
+  transition: 0.5s;
+  box-shadow: 5px 10px 20px rgba(0,0,0,0.25)
+}
+
+@media only screen and ( max-width: 900px){
+  .containerImg{
+    gap: 1rem;
+  }
+  .imgHover{
+    width: 400px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 430px){
+  .containerImg{
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .imgHover{
+    width: 350px;
+    height: 350px;
+  }
+}

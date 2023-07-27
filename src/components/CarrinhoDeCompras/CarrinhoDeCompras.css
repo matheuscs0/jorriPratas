@@ -1,6 +1,6 @@
 .sidebar {
   position: absolute;
-  top: 135px;
+  top: 35px;
   right: 0;
   width: 300px;
   height: 100vh;
@@ -8,6 +8,7 @@
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.90);
   color: aliceblue;
   z-index: 9999;
+  animation: showSideBar 0.2s forwards;
 }
 .carrinho-de-compras{
   display: flex;
@@ -28,6 +29,7 @@
   width: 100%;
   border-radius: 10px;
   padding-bottom: 1rem;
+  z-index: 800;
 }
 .closeButton{
   display: flex;
@@ -81,7 +83,10 @@
   height: 200px;
   position: absolute;
   bottom: 0;
-  margin-bottom: 7rem;
+  margin-bottom: 2rem;
+  z-index: 999;
+  background-color: #181717;
+  position: absolute;
 }
 .finishCart p{
   display: flex;
@@ -111,4 +116,18 @@
   font-weight: 800;
   font-size: 15px;
   text-decoration: none;
+}
+@keyframes showSideBar {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  50%{
+    opacity: 0.5;
+    width: 150px;
+  } 
+  100%{
+    opacity: 1;
+    width: 300px;
+  }
 }

@@ -5,17 +5,12 @@
   justify-content: center;
   align-items: center;
   margin: 2rem;
+ 
 }
 .swiper{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.swiper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
 }
 .swiperSlide{
   display: flex;

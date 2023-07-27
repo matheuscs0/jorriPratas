@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ColarSwiper from '../components/ColarSwiper/ColarSwiper';
+import ColarSwiper from '../components/Swiper/ColarSwiper';
 import DropdownMenu from '../components/DropdownMenu/DropdownMenu';
 import NavBar from '../components/NavBar/NavBar';
 import FooterDetails from '../components/footerDetails/footerDetails';
@@ -9,6 +9,9 @@ import Cookies from 'js-cookie';
 import CarrinhoDeCompras from '../components/CarrinhoDeCompras/CarrinhoDeCompras';
 import './css/home.css'
 import SearchInput from '../components/SearchInput/SearchInput';
+import ImgHover from '../components/ImgHover';
+import FooterPayment from '../components/FooterPaymentMethods';
+import GridImagens from '../components/GridImagens';
 
 const Home = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -67,9 +70,13 @@ const Home = () => {
         <SearchInput />
       </div>
       {showLoginModal && <LoginModal onClose={handleCloseModal} />}
-      <DropdownMenu />
+      <div className='dropdownMenu'>
+        <DropdownMenu />
+      </div>
+      <ImgHover/>
       <ColarSwiper />
       <FooterDetails />
+      <GridImagens/>
       {showSidebar && cartItems.length > 0 && (
         <div className="sidebar">
           <CarrinhoDeCompras
@@ -79,6 +86,7 @@ const Home = () => {
           />
         </div>
       )}
+      <FooterPayment/>
     </div>
   );
 };

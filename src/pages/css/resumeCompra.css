@@ -24,7 +24,7 @@
   align-items: center;
   flex-direction: column;
   text-align: left;
-  width: 80%;
+  max-width: 80%;
 }
 .resume{
   display: flex;
@@ -39,4 +39,36 @@
   justify-content: space-around;
   width: 100%;
   gap: 15rem;
+}
+@media only screen and (max-width: 1270px){
+  .finishDown{
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 2rem;
+    align-items: center;
+  }
+  .titleFinish{
+    margin: 0 auto;
+  }
+  .tableContainer table{
+    width: 50px;
+  }
+  .tableContainer .prazoTag{
+    display: none;
+  }
+  .tableContainer .qntdTag{
+    margin-top: 3rem;
+  }
+  .tableContainer .trash{
+    display: none;
+  }
+  .resume .resumeContainer{
+    width: 350px;
+  }
+  .resume .resumeTable td{
+    gap: 8rem;
+  }
+  .resume .linksResume a{
+    width: 300px;
+  }
 }

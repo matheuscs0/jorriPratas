@@ -531,7 +531,7 @@ const products = [
   {
     id: "T300440",
     poster_path: "../public/imgs/Coração/poster_pulseiraCoracao.jpg",
-    foto_about1: "../public/imgs/Coração/tornozeleira_coracao.jpeg",
+    foto_about1: "../public/imgs/Coração/tornozeleira_coracao.jpg",
     title: "TORNOZELEIRA DE PRATA ELO CORAÇÃO",
     disponivel: "sim",
     price: "77.90",

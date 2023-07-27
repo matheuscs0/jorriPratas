@@ -4,7 +4,6 @@
   align-items: center;
 }
 .Header svg{
-  position: fixed;
   color: aliceblue;
   cursor: pointer;
   width: 30px;

@@ -3,6 +3,7 @@
   padding: 10px;
   margin-bottom: 5px;
   border-radius: 5px;
+  max-width: 800px;
 }
 .productName{
   max-width: 360px;

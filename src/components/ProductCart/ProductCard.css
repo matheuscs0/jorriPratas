@@ -46,7 +46,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15rem;
+  max-width: 15rem;
+  width: 100%;
+  min-width: 5rem;
   height: 30px;
   border-radius: 0.5rem;
   border: 0.1rem solid #333333;

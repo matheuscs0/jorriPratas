@@ -5,12 +5,13 @@
   color: aliceblue;
   background-color: #181717;
   position: absolute;
-  height: 100vh;
+  height: 100dvh;
   width:300px;
   top: 0;
   left: 0;
   animation: showSideBar .4s;
   flex-direction: column;
+  z-index: 999;
 }
 .close {
   width: 100%;

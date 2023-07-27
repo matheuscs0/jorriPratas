@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 import Header from '../Header/index';
 
 
-const NavBar = ({ onLoginClick, onOpenSidebar, onClose }) => {
+const NavBar = ({ onLoginClick, onOpenSidebar }) => {
   const navigate = useNavigate();
   const [showSidebar, setShowSidebar] = useState(false);
   const [cartItems, setCartItems] = useState([]);
@@ -53,7 +53,9 @@ const NavBar = ({ onLoginClick, onOpenSidebar, onClose }) => {
         <SearchInput onSearch={handleSearch} />
       </div>
       <div className="svgs">
-        <VscAccount onClick={onLoginClick}  className='LoginSvg'/>
+        <div className="LoginSvg">
+          <VscAccount onClick={onLoginClick}  />
+        </div>  
         <HiShoppingBag onClick={handleClick} alt="Carrinho"/> 
       </div>
       {showSidebar && (

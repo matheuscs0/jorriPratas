@@ -4,7 +4,7 @@ import './styles.css'
 import { Link } from 'react-router-dom';
 import {VscAccount} from 'react-icons/vsc'
 
-const SideBar = ({active}) => {
+const SideBar = ({active, onLoginClick}) => {
   const CloseSideBar = () => {
     active(false)
   }
@@ -30,10 +30,9 @@ const SideBar = ({active}) => {
        <Link to='/products/brincos'>
        <li>Brincos</li>
        </Link>
-      </div>
-      <div className='account'>
-        <VscAccount/> 
-        <p>Minha Conta</p>
+       <Link >
+       <li onClick={onLoginClick}><VscAccount/> Minha Conta</li>
+       </Link>
       </div>
     </div>
   );

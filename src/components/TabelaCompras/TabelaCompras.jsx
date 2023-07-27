@@ -30,10 +30,10 @@ const TabelaCompras = ({ item, handleRemoveItem }) => {
           <tr>
             <th></th>
             <th>Produtos</th>
-            <th>Entrega</th>
+            <th className='prazoTag'>Entrega</th>
             <th>Preço</th>
             <th>Quantidade</th>
-            <th></th>
+            <th className='trash'></th>
           </tr>
         </thead>
         <tbody>
@@ -51,7 +51,7 @@ const TabelaCompras = ({ item, handleRemoveItem }) => {
               <p className='quantify'>{quant}</p>
               <IoIosAdd onClick={handleAddItemClick} />
             </td>
-            <td>
+            <td className='trash'>
               <BiTrash onClick={handleRemoveItemClick}>Remover</BiTrash>
             </td>
           </tr>
