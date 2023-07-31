@@ -8,6 +8,9 @@ import NavBar from '../components/NavBar/NavBar';
 import LoginModal from '../components/Login/LoginModal';
 import CarrinhoDeCompras from '../components/CarrinhoDeCompras/CarrinhoDeCompras';
 import Cookies from 'js-cookie';
+import FooterPayment from '../components/FooterPaymentMethods';
+import Footer from '../components/Footer';
+import GridImagens from '../components/GridImagens';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -67,7 +70,7 @@ const ProductDetail = () => {
       />
       {showLoginModal && <LoginModal onClose={handleCloseModal} />}
       <div>
-        <DropdownMenu />
+       <GridImagens/>
       </div>
      
       <DetailsCard product={product} onAddToCart={addToCart} />
@@ -80,6 +83,8 @@ const ProductDetail = () => {
           />
         </div>
       )}
+      <FooterPayment/>
+      <Footer/>
     </div>
   );
 };

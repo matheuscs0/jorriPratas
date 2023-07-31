@@ -1,5 +1,7 @@
 import React from 'react';
 import './styles.css'
+import {MdEmail} from 'react-icons/md'
+import {BsFillTelephoneFill} from 'react-icons/bs'
 
 const images = [
   {id: "1",
@@ -23,6 +25,11 @@ const security =[
 const FooterPayment = () => {
   return (
     <div className='ContainerFooterPayment'>
+      <div className="containerContact">
+          <h3>Contato</h3>
+          <p><MdEmail/> jorripratas2023@gmail.com</p>
+          <p><BsFillTelephoneFill/> +55 11 99995-8883</p>
+      </div>
       <div className='PaymentContainer'>
         <div className='methodsTitle'>
           <h5>FORMAS DE PAGAMENTO</h5>

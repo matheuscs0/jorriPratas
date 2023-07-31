@@ -10,8 +10,9 @@ import CarrinhoDeCompras from '../components/CarrinhoDeCompras/CarrinhoDeCompras
 import './css/home.css'
 import SearchInput from '../components/SearchInput/SearchInput';
 import ImgHover from '../components/ImgHover';
-import FooterPayment from '../components/FooterPaymentMethods';
 import GridImagens from '../components/GridImagens';
+import Footer from '../components/Footer';
+import FooterPayment from '../components/FooterPaymentMethods';
 
 const Home = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -71,12 +72,11 @@ const Home = () => {
       </div>
       {showLoginModal && <LoginModal onClose={handleCloseModal} />}
       <div className='dropdownMenu'>
-        <DropdownMenu />
-      </div>
-      <ImgHover/>
-      <ColarSwiper />
-      <FooterDetails />
       <GridImagens/>
+      </div>
+      <ColarSwiper />
+      <ImgHover/>
+      <FooterDetails />
       {showSidebar && cartItems.length > 0 && (
         <div className="sidebar">
           <CarrinhoDeCompras
@@ -87,6 +87,7 @@ const Home = () => {
         </div>
       )}
       <FooterPayment/>
+      <Footer/>
     </div>
   );
 };

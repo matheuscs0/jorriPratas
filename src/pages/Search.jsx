@@ -10,6 +10,8 @@ import './css/ProductPage.css'
 import LoginModal from '../components/Login/LoginModal'
 import { useState } from 'react'
 import CarrinhoDeCompras from '../components/CarrinhoDeCompras/CarrinhoDeCompras';
+import FooterPayment from '../components/FooterPaymentMethods';
+import Footer from '../components/Footer';
 
 const Search = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -87,6 +89,8 @@ const Search = () => {
         <p>Nenhum resultado encontrado.</p>
       )}
       </div>
+      <FooterPayment/>
+      <Footer/>
     </div>
   );
 };

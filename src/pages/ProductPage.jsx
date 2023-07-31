@@ -3,7 +3,7 @@ import './css/ProductPage.css'
 import Colar from "../components/Catalogos/Colar";
 import Pulseiras from "../components/Catalogos/Pulseiras";
 import Tornozeleira from '../components/Catalogos/Tornozeleira' 
-import DropdownMenu from "../components/DropdownMenu/DropdownMenu";
+import GridImagens from "../components/GridImagens";
 import NavFreteGratis from "../components/navFreteGratis/navFreteGratis";
 import NavBar from "../components/NavBar/NavBar";
 import { useState, useEffect } from 'react'
@@ -12,6 +12,8 @@ import LoginModal from '../components/Login/LoginModal'
 import Aneis from "../components/Catalogos/Aneis";
 import Brincos from "../components/Catalogos/Brincos";
 import CarrinhoDeCompras from "../components/CarrinhoDeCompras/CarrinhoDeCompras";
+import FooterPayment from "../components/FooterPaymentMethods";
+import Footer from "../components/Footer";
 
 const ProductPage = () => {
   const { type } = useParams();
@@ -84,7 +86,7 @@ const ProductPage = () => {
     />
       {showLoginModal && <LoginModal onClose={handleCloseModal} />}
   <div className="dropdownMenu">
-    <DropdownMenu />
+    <GridImagens/>
   </div>
   {showSidebar && cartItems.length > 0 && (
         <div className="sidebar">
@@ -95,7 +97,10 @@ const ProductPage = () => {
           />
         </div>
       )}
-  {renderProducts()}</div>
+  {renderProducts()}
+  <FooterPayment/>
+  <Footer/>
+  </div>
   ) 
   
 };

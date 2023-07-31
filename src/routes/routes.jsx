@@ -25,3 +25,7 @@ const RoutesConfig = ({cartItems}) => {
 };
 
 export default RoutesConfig;
+
+
+
+
