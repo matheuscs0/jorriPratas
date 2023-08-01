@@ -36,7 +36,7 @@ const Sign = ({ onClose, onGoBack }) => {
             </button>
           </div>
           <div className="line"></div>
-          <form className="form">
+          <form className="form" id='login'>
             <div className="form-group">
               <label htmlFor="password">Nome</label>
               <input required="" name="nome" placeholder="Seu nome" id="nome" type="text" />

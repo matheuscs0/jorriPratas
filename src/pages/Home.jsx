@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ColarSwiper from '../components/Swiper/ColarSwiper';
-import DropdownMenu from '../components/DropdownMenu/DropdownMenu';
 import NavBar from '../components/NavBar/NavBar';
 import FooterDetails from '../components/footerDetails/footerDetails';
 import NavFreteGratis from '../components/navFreteGratis/navFreteGratis';
@@ -14,7 +13,7 @@ import GridImagens from '../components/GridImagens';
 import Footer from '../components/Footer';
 import FooterPayment from '../components/FooterPaymentMethods';
 
-const Home = () => {
+const Home = ({user}) => {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [showSidebar, setShowSidebar] = useState(false);

@@ -5,7 +5,6 @@ import ProductDetail from '../pages/ProductDetail';
 import Search from '../pages/Search';
 import ProductPage from '../pages/ProductPage';
 import App from '../App.jsx'
-
 import CardResume from '../pages/CardResume';
 import FinalizarCompra from '../pages/FinalizarCompra';
 

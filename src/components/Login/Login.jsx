@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
+import  { useEffect, useState } from 'react';
 import './Login.css';
 import { MdClose } from 'react-icons/md';
 import { FcGoogle } from 'react-icons/fc';
 import Sign from './Sign';
+import { validarEmail, validarSenha } from '../Utils/validadores';
+import {firebase, auth} from '../services/firebase'
+import useAuth from '../Hooks/useAuth'
+
 
 const Login = ({ onClose }) => {
   const [showModal, setShowModal] = useState(true);
   const [showLogin, setShowLogin] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [form, setForm] = useState([])
+  
+  const {user, setUser} = useAuth()
+  console.log(user)
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -20,6 +30,55 @@ const Login = ({ onClose }) => {
   const handleShowLogin = () => {
     setShowLogin(true);
   };
+
+  useEffect(()=>{
+    auth.onAuthStateChanged(user =>{
+      if(user){
+        const {uid, displayName, email, photoURL} = user
+        setUser({
+          id: uid,
+          photo: photoURL,
+          name:displayName,
+          email: email
+        })
+      }
+      })
+  },[])
+  const handleClickButtonLoginGoogle = async () => {
+    const provider = new firebase.auth.GoogleAuthProvider
+    const result = await auth.signInWithPopup(provider)
+    if(result.user){
+      const {uid, displayName, email, photoURL} = result.user
+      setUser({
+        id: uid,
+        photo: photoURL,
+        name:displayName,
+        email: email
+      })
+    }
+  }
+
+  const handleSubmit =  async (event) => {
+    event.preventDefault();
+    try{
+        alert('Usuario Logado')
+      }
+    catch(err){
+      alert('algo deu errado' + err)
+    }
+  }
+
+  const handleChange = (event) => {
+    console.log('Digitando', event.target.name, event.target.value)
+    setForm({...form, [event.target.name]: event.target.value})
+    console.log('Form', form)
+  }
+
+  const validadorInput = () => {
+    return validarEmail(form.email) && validarSenha(form.password)
+  }
+
+  console.log('validador', validadorInput())
 
   return (
     <div className="containerLogin">
@@ -42,22 +101,22 @@ const Login = ({ onClose }) => {
                       </svg>
                       <span>Log in com Facebook</span>
                     </button>
-                    <button className="social-button apple">
-                      <FcGoogle />
+                    <button className="social-button apple"  onClick={handleClickButtonLoginGoogle}>
+                      <FcGoogle/>
                       <span>Log in com o Google</span>
                     </button>
                   </div>
                   <div className="line"></div>
-                  <form className="form">
+                  <form className="form" id='login'>
                     <div className="form-group">
                       <label htmlFor="email">Email</label>
-                      <input required="" placeholder="Email" name="email" id="email" type="text" />
+                      <input required placeholder="Email" name="email" id="email" type="text" onChange={handleChange}/>
                     </div>
                     <div className="form-group">
                       <label htmlFor="password">Senha</label>
-                      <input required="" name="password" placeholder="Senha" id="password" type="password" />
+                      <input required name="password" placeholder="Senha" id="password" type="password" onChange={handleChange}/>
                     </div>
-                    <button type="submit" className="form-submit-btn">Log In</button>
+                    <button type="submit" className="form-submit-btn" onClick={handleSubmit}>Log In</button>
                   </form>
                   <a className="forgot-password-link link" href="#">Esqueceu a senha?</a>
                   <p className="signup-link">
