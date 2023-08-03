@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import RoutesConfig from './routes/routes';
 import './index.css';
-import AuthContextProvider from './components/Context/AuthCOntext';
+import AuthContextProvider from './components/Context/AuthContext';
 
 
 import { register } from 'swiper/element/bundle';

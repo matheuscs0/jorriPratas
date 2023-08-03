@@ -6,16 +6,15 @@ import Sign from './Sign';
 import { validarEmail, validarSenha } from '../Utils/validadores';
 import {firebase, auth} from '../services/firebase'
 import useAuth from '../Hooks/useAuth'
+import { useNavigate } from 'react-router-dom';
 
-
-const Login = ({ onClose }) => {
+const Login = ({ onClose}) => {
   const [showModal, setShowModal] = useState(true);
   const [showLogin, setShowLogin] = useState(true);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [form, setForm] = useState([])
   
   const {user, setUser} = useAuth()
+  const navigate = useNavigate();
   console.log(user)
 
   const handleCloseModal = () => {
@@ -38,12 +37,13 @@ const Login = ({ onClose }) => {
         setUser({
           id: uid,
           photo: photoURL,
-          name:displayName,
+          name:displayName || user.name,
           email: email
         })
       }
       })
   },[])
+  console.log(user)
   const handleClickButtonLoginGoogle = async () => {
     const provider = new firebase.auth.GoogleAuthProvider
     const result = await auth.signInWithPopup(provider)
@@ -55,18 +55,42 @@ const Login = ({ onClose }) => {
         name:displayName,
         email: email
       })
+      if (user) {
+        navigate('/profile');
+        alert('Login realizado com sucesso!');
+      } else {
+        alert('Erro ao fazer o cadastro: ' + error.message);
+      }
     }
   }
 
-  const handleSubmit =  async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    try{
-        alert('Usuario Logado')
-      }
-    catch(err){
-      alert('algo deu errado' + err)
+  
+    if (!validadorInput()) {
+      alert('Por favor, preencha os campos corretamente.');
+      return;
     }
-  }
+  
+    try {
+      const result = await auth.signInWithEmailAndPassword(form.email, form.password);
+      if (result.user) {
+        const { uid, email, photoURL, nameFromForm } = result.user;
+        setUser({
+          id: uid,
+          photo: photoURL,
+          name: user.name, // Usar form.nome se estiver disponível, caso contrário, usar displayName do login
+          email: email,
+        });
+        alert('Login realizado com sucesso!');
+        navigate('/profile')
+      }
+    } catch (error) {
+      alert('Erro ao fazer login: ' + error.message);
+    }
+  };
+  
+  
 
   const handleChange = (event) => {
     console.log('Digitando', event.target.name, event.target.value)

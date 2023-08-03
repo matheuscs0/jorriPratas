@@ -8,9 +8,11 @@ import CarrinhoDeCompras from '../CarrinhoDeCompras/CarrinhoDeCompras';
 import '../CarrinhoDeCompras/CarrinhoDeCompras.css'
 import { useEffect } from 'react';
 import Header from '../Header/index';
+import useAuth from '../Hooks/useAuth';
 
 
 const NavBar = ({ onLoginClick, onOpenSidebar }) => {
+  const { user } = useAuth();
   const navigate = useNavigate();
   const [showSidebar, setShowSidebar] = useState(false);
   const [cartItems, setCartItems] = useState([]);
@@ -31,8 +33,16 @@ const NavBar = ({ onLoginClick, onOpenSidebar }) => {
   };
 
   const handleClick = () => {
+    onOpenSidebar();
     setShowSidebar(true);
-    onOpenSidebar(); 
+  };
+    
+  const handleAccountClick = () => {
+    if (user) {
+      navigate('/profile'); // Redireciona para /profile se o usuário estiver logado
+    } else {
+      onLoginClick(); // Abre o onLoginClick para o usuário logar ou criar uma conta
+    }
   };
 
   const handleCloseSidebar = () => {
@@ -42,7 +52,7 @@ const NavBar = ({ onLoginClick, onOpenSidebar }) => {
   return (
     <nav className="navBar">
       <div className='Header1'>
-       <Header/>
+        <Header/>
       </div>
       <Link to="/">
         <div className="logo">
@@ -54,7 +64,7 @@ const NavBar = ({ onLoginClick, onOpenSidebar }) => {
       </div>
       <div className="svgs">
         <div className="LoginSvg">
-          <VscAccount onClick={onLoginClick}  />
+          <VscAccount onClick={handleAccountClick} />
         </div>  
         <HiShoppingBag onClick={handleClick} alt="Carrinho"/> 
       </div>
@@ -68,6 +78,7 @@ const NavBar = ({ onLoginClick, onOpenSidebar }) => {
 };
 
 export default NavBar;
+
 
 
 

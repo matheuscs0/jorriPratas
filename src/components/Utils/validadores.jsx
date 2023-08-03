@@ -3,6 +3,6 @@ const validarEmail = (email) => {
 }
 
 const validarSenha = (password) => {
-  return password?.toString().length > 6
+  return password?.toString().length >= 6
 }
 export {validarEmail, validarSenha}

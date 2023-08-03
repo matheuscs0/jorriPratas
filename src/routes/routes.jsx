@@ -7,8 +7,11 @@ import ProductPage from '../pages/ProductPage';
 import App from '../App.jsx'
 import CardResume from '../pages/CardResume';
 import FinalizarCompra from '../pages/FinalizarCompra';
+import Profile from '../pages/Profile';
+import useAuth from '../components/Hooks/useAuth';
 
 const RoutesConfig = ({cartItems}) => {
+  const { user } = useAuth();
   return (
     <Routes>
       <Route element={<App />}>
@@ -18,6 +21,13 @@ const RoutesConfig = ({cartItems}) => {
         <Route path="/products/:type" element={<ProductPage />} />
         <Route path="/resume-compra" element={<CardResume cartItems={cartItems}/>}></Route>
         <Route path='/finalizar-compra' element={<FinalizarCompra/>}></Route>
+        <Route
+          path="/profile"
+          element={
+            <Profile />
+          } // Use "element" para renderizar o componente protegido
+          authenticated={user !== null}
+        />
       </Route>
     </Routes>
   );

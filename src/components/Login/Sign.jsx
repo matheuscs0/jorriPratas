@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { MdClose } from 'react-icons/md';
-import { FcGoogle} from 'react-icons/fc'
-import {IoMdArrowBack} from 'react-icons/io'
+import { FcGoogle } from 'react-icons/fc';
+import { IoMdArrowBack } from 'react-icons/io';
+import { validarEmail, validarSenha } from '../Utils/validadores';
+import { firebase, auth } from '../services/firebase';
+import useAuth from '../Hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
 
 const Sign = ({ onClose, onGoBack }) => {
+  const [form, setForm] = useState({
+    nome: '',
+    email: '',
+    password: '',
+    DataNasc: '',
+  });
+
+  const { user, setUser } = useAuth();
+  const navigate = useNavigate();
+  console.log(user);
+
   const handleCloseModal = () => {
     onClose();
   };
@@ -11,17 +26,91 @@ const Sign = ({ onClose, onGoBack }) => {
   const handleGoBack = () => {
     onGoBack();
   };
+  const nameFromForm = form.nome;
+
+  useEffect(()=>{
+    auth.onAuthStateChanged(user =>{
+      if(user){
+        const nameFromForm = form.nome;
+        console.log(nameFromForm)
+        const {uid, displayName, email, photoURL} = user
+        setUser({
+          id: uid,
+          photo: photoURL,
+          name:displayName || nameFromForm,
+          email: email
+        })
+      }
+      })
+  },[])
+
+  const handleClickButtonLoginGoogle = async () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const result = await auth.signInWithPopup(provider);
+    if (result.user) {
+ 
+      const { uid, displayName, email, photoURL,  } = result.user;
+      setUser({
+        id: uid,
+        photo: photoURL,
+        name: displayName,
+        email: email,
+      });
+      alert('Cadastro realizado com sucesso!');
+      navigate('/profile')
+    }
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!validadorInput()) {
+      alert('Por favor, preencha os campos corretamente.');
+      return;
+    }
+
+    try {
+      const nameFromForm = form.nome;
+      const result = await auth.createUserWithEmailAndPassword(form.email, form.password);
+
+      if (result.user) {
+        const { uid, email, photoURL } = result.user;
+        setUser({
+          id: uid,
+          photo: photoURL,
+          name: nameFromForm, 
+          email: email,
+        });
+        alert('Cadastro realizado com sucesso!');
+        navigate('/profile')
+      }
+    } catch (error) {
+      alert('Erro ao fazer o cadastro: ' + error.message);
+    }
+  };
+
+  const handleChange = (event) => {
+    console.log('Digitando', event.target.name, event.target.value);
+    setForm({ ...form, [event.target.name]: event.target.value });
+    console.log('Form', form);
+  };
+
+  const validadorInput = () => {
+    return validarEmail(form.email) && validarSenha(form.password);
+  };
+
+  console.log('validador', validadorInput());
 
   return (
     <div className="containerLogin">
       <div className="LoginForm">
         <div className="form-container1">
           <div className="close-button1">
-          <IoMdArrowBack onClick={handleGoBack}/>
+            <IoMdArrowBack onClick={handleGoBack} />
             <MdClose onClick={handleCloseModal} />
           </div>
           <div className="logo-container">
-                  <img src="../public/imgs/Logo/logo_jorri.png" alt="Logo" />
+            <img src="../public/imgs/Logo/logo_jorri.png" alt="Logo" />
           </div>
           <div className="social-buttons">
             <button className="social-button facebook">
@@ -30,36 +119,39 @@ const Sign = ({ onClose, onGoBack }) => {
               </svg>
               <span>Inscreva-se com o Facebook</span>
             </button>
-            <button className="social-button apple">
-              <FcGoogle/>
+            <button className="social-button apple" onClick={handleClickButtonLoginGoogle}>
+              <FcGoogle />
               <span>Increva-se com o Google</span>
             </button>
           </div>
           <div className="line"></div>
-          <form className="form" id='login'>
+          <form className="form" id="login">
             <div className="form-group">
-              <label htmlFor="password">Nome</label>
-              <input required="" name="nome" placeholder="Seu nome" id="nome" type="text" />
+              <label htmlFor="nome">Nome</label>
+              <input required name="nome" placeholder="Seu nome" id="nome" type="text" onChange={handleChange} />
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input required="" placeholder="Email" name="email" id="email" type="text" />
+              <input required placeholder="Email" name="email" id="email" type="text" onChange={handleChange} />
             </div>
             <div className="form-group">
               <label htmlFor="password">Senha</label>
-              <input required="" name="password" placeholder="Senha" id="password" type="password" />
+              <input required name="password" placeholder="Senha" id="password" type="password" onChange={handleChange} />
             </div>
             <div className="form-group">
-              <label htmlFor="password">Data de nascimento</label>
-              <input required="" name="DataNasc" placeholder="Sua data de nascimento" id="DataNasc" type="date" />
+              <label htmlFor="DataNasc">Data de nascimento</label>
+              <input required name="DataNasc" placeholder="Sua data de nascimento" id="DataNasc" type="date" onChange={handleChange} />
             </div>
-            <button type="submit" className="form-submit-btn">Sign In</button>
+            <button type="submit" className="form-submit-btn" onClick={handleSubmit}>
+              Sign In
+            </button>
           </form>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Sign;
+
 
