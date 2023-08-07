@@ -25,6 +25,12 @@
   cursor: pointer;
 }
 
+@media only screen and (max-width:430px){
+  .containerForm{
+    width: 350px;
+  }
+}
+
 
 
 

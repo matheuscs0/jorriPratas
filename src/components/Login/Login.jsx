@@ -4,7 +4,7 @@ import { MdClose } from 'react-icons/md';
 import { FcGoogle } from 'react-icons/fc';
 import Sign from './Sign';
 import { validarEmail, validarSenha } from '../Utils/validadores';
-import {firebase, auth} from '../services/firebase'
+import {firebase, auth, firestore} from '../services/firebase'
 import useAuth from '../Hooks/useAuth'
 import { useNavigate } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ const Login = ({ onClose}) => {
   console.log(user)
 
   const handleCloseModal = () => {
-    setShowModal(false);
+    setShowModal(false);  
     onClose();
   };
 
@@ -49,6 +49,9 @@ const Login = ({ onClose}) => {
     const result = await auth.signInWithPopup(provider)
     if(result.user){
       const {uid, displayName, email, photoURL} = result.user
+      const uidUser = result.user.id
+        const doc = await firebase.firestore().doc(`users/${uidUser}`).get()
+        console.log(doc.data())
       setUser({
         id: uid,
         photo: photoURL,
@@ -75,7 +78,10 @@ const Login = ({ onClose}) => {
     try {
       const result = await auth.signInWithEmailAndPassword(form.email, form.password);
       if (result.user) {
-        const { uid, email, photoURL, nameFromForm } = result.user;
+        const { uid, email, photoURL } = result.user;
+        const uidUser = result.user.id
+        const doc = await firebase.firestore().doc(`users/${uidUser}`).get()
+        console.log(doc.data())
         setUser({
           id: uid,
           photo: photoURL,

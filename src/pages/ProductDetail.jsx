@@ -11,8 +11,12 @@ import Cookies from 'js-cookie';
 import FooterPayment from '../components/FooterPaymentMethods';
 import Footer from '../components/Footer';
 import GridImagens from '../components/GridImagens';
+import useAuth from '../components/Hooks/useAuth';
 
 const ProductDetail = () => {
+  const { user, setUser } = useAuth();
+  console.log(user)
+
   const { id } = useParams();
   const product = products.find((product) => product.id === id);
   const [showLoginModal, setShowLoginModal] = useState(false);

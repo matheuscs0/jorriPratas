@@ -12,8 +12,12 @@ import { useState } from 'react'
 import CarrinhoDeCompras from '../components/CarrinhoDeCompras/CarrinhoDeCompras';
 import FooterPayment from '../components/FooterPaymentMethods';
 import Footer from '../components/Footer';
+import useAuth from '../components/Hooks/useAuth';
 
 const Search = () => {
+  const { user, setUser } = useAuth();
+  console.log(user)
+
   const [cartItems, setCartItems] = useState([]);
   const [showSidebar, setShowSidebar] = useState(false);
   const location = useLocation();

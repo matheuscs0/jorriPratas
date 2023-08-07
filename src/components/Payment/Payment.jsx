@@ -9,9 +9,16 @@ import './Payment.css';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import emailjs from '@emailjs/browser'
 import {Link} from 'react-router-dom'
+import { usePaymentContext } from '../Context/PaymentContext';
+import useAuth from '../Hooks/useAuth';
+import {firebase, auth, firestore} from '../services/firebase'
 
 
 export default function Payment({cep, address, city, state, number, complemento, onPreviousStep, cartItems, total}) {
+  const { user, setUser } = useAuth();
+  console.log(user)
+  const userId = user?.id;
+
   const [nomeCartao, setNomeCartao] = useState('');
   const [numeroCartao, setNumeroCartao] = useState('');
   const [exp_month, setExp_month] = useState('');
@@ -20,6 +27,9 @@ export default function Payment({cep, address, city, state, number, complemento,
   const [cpf, setCpf] = useState('');
   const [email, setEmail] = useState('');
   const [paymentSuccess, setPaymentSuccess] = useState(false);
+  const { setPaymentInfo } = usePaymentContext();
+  const { paymentInfo } = usePaymentContext();
+  console.log(paymentInfo);
 
   const handleSubmit = async (event) => {
     if (
@@ -43,6 +53,7 @@ export default function Payment({cep, address, city, state, number, complemento,
     const totalWithoutSymbols = total.replace(/[.,]/g, '');
     const itemSize = cartItems.map((item) => item.size.size)
     const itemId = cartItems.map((item) => item.id)
+    const poster_path = cartItems.map((item) => item.poster_path)
     console.log(itemId)
     console.log(itemSize)
     console.log(itemPrice)
@@ -74,8 +85,43 @@ export default function Payment({cep, address, city, state, number, complemento,
       if(response.status === 200){
         localStorage.setItem("paymentId", JSON.stringify({ id : response.id }));
         setPaymentSuccess(true)
+        firestore.collection('users').doc(userId).update({
+          nomeCartao,
+          cpf,
+          cep,
+            address,
+            city,
+            state,
+            number,
+            complemento,
+            itemTitle,
+            itemPrice,
+            totalWithoutSymbols, 
+            itemSize, 
+            itemId,
+            poster_path
+        });
+        setPaymentInfo({
+        nomeCartao,
+        cpf,
+        email,
+        cep,
+        address,
+        city,
+        state,
+        number, 
+        complemento,
+        itemTitle,
+        itemPrice,
+        totalWithoutSymbols, 
+        itemSize, 
+        itemId,
+        poster_path
+        })
       }
-    } catch (error) {
+      }
+     catch (error) {
+      alert('Pagamento recusado')
     }
     function sendEmail(){
       const itemTitle = cartItems.map((item) => item.title);

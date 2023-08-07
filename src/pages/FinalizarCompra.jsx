@@ -10,8 +10,13 @@ import 'react-step-progress-bar/styles.css';
 import './css/ProgressBar.css'
 import './css/FinalizarCompra.css';
 import {SiVerizon} from 'react-icons/si'
+import { PaymentProvider } from '../components/Context/PaymentContext';
+import useAuth from '../components/Hooks/useAuth';
 
 const FinalizarCompra = ({ onSubmit, onRemove }) => {
+  const { user, setUser } = useAuth();
+  console.log(user)
+
   const [cartItems, setCartItems] = useState([]);
   const [addressInfo, setAddressInfo] = useState();
   const [currentStep, setCurrentStep] = useState(0); // Iniciamos na etapa 0 (ConsultaCep)
@@ -71,6 +76,7 @@ const FinalizarCompra = ({ onSubmit, onRemove }) => {
   };
 
   return (
+    <PaymentProvider>
     <div>
       <div className='navs'>
         <NavFreteGratis />
@@ -136,6 +142,7 @@ const FinalizarCompra = ({ onSubmit, onRemove }) => {
         </div>
       )}
     </div>
+    </PaymentProvider>
   );
 };
 

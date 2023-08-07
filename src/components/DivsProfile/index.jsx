@@ -7,7 +7,7 @@ const DivProfile = () => {
       <div className="divProfile">
         <div className="titleDiv"><h3>Meus Pedidos</h3></div>
         <div className="div">
-          <Link to="">Últimos pedidos</Link>
+          <Link to="/last-orders">Últimos pedidos</Link>
         </div>
       </div>
 

@@ -9,6 +9,7 @@ import CardResume from '../pages/CardResume';
 import FinalizarCompra from '../pages/FinalizarCompra';
 import Profile from '../pages/Profile';
 import useAuth from '../components/Hooks/useAuth';
+import Orders from '../pages/UltimosPedidos';
 
 const RoutesConfig = ({cartItems}) => {
   const { user } = useAuth();
@@ -29,6 +30,7 @@ const RoutesConfig = ({cartItems}) => {
           authenticated={user !== null}
         />
       </Route>
+      <Route path='last-orders' element={<Orders/>}/>
     </Routes>
   );
 };

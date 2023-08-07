@@ -3,7 +3,7 @@ import { MdClose } from 'react-icons/md';
 import { FcGoogle } from 'react-icons/fc';
 import { IoMdArrowBack } from 'react-icons/io';
 import { validarEmail, validarSenha } from '../Utils/validadores';
-import { firebase, auth } from '../services/firebase';
+import { firebase, auth, firestore } from '../services/firebase';
 import useAuth from '../Hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 
@@ -50,6 +50,29 @@ const Sign = ({ onClose, onGoBack }) => {
     if (result.user) {
  
       const { uid, displayName, email, photoURL,  } = result.user;
+
+      const uidUser = result.user.uid
+      const users = firebase.firestore().collection('users')
+      users.doc(uidUser).set({
+        id: uid,
+        photo: photoURL,
+        name: displayName, 
+        email: email,
+        dataNasc: form.DataNasc,
+        cep: '',
+        address: '',
+        city: '',
+        complemento: '',
+        state: '',
+        number: '',
+        itemTitle: '',
+        itemPrice: '',
+        totalWithoutSymbols: '', 
+        itemSize: '', 
+        itemId: ''
+
+      })
+
       setUser({
         id: uid,
         photo: photoURL,
@@ -75,6 +98,16 @@ const Sign = ({ onClose, onGoBack }) => {
 
       if (result.user) {
         const { uid, email, photoURL } = result.user;
+
+        const uidUser = result.user.uid
+        const users = firebase.firestore().collection('users')
+        users.doc(uidUser).set({
+          id: uid,
+          photo: photoURL,
+          name: nameFromForm, 
+          email: email,
+          dataNasc: form.DataNasc
+        })
         setUser({
           id: uid,
           photo: photoURL,

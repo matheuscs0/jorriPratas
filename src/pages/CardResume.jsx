@@ -6,8 +6,12 @@ import Nav from '../components/Nav/Nav';
 import NavFreteGratis from '../components/navFreteGratis/navFreteGratis';
 import './css/resumeCompra.css';
 import Resume from '../components/Resume/Resume';
+import useAuth from '../components/Hooks/useAuth';
 
 const CardResume = () => {
+  const { user, setUser } = useAuth();
+  console.log(user)
+
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {

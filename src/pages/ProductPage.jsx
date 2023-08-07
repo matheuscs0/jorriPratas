@@ -14,8 +14,12 @@ import Brincos from "../components/Catalogos/Brincos";
 import CarrinhoDeCompras from "../components/CarrinhoDeCompras/CarrinhoDeCompras";
 import FooterPayment from "../components/FooterPaymentMethods";
 import Footer from "../components/Footer";
+import useAuth from "../components/Hooks/useAuth";
 
 const ProductPage = () => {
+  const { user, setUser } = useAuth();
+  console.log(user)
+
   const { type } = useParams();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [cartItems, setCartItems] = useState([]);

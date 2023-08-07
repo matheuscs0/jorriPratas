@@ -8,16 +8,34 @@ import { useNavigate } from 'react-router-dom';
 import FooterPayment from '../components/FooterPaymentMethods';
 import Footer from '../components/Footer';
 import DivProfile from '../components/DivsProfile';
+import {useState, useEffect} from 'react'
+import { firestore } from '../components/services/firebase';
 
 const Profile = ({}) => {
-  const { user, setUser } = useAuth();
-  const navigate = useNavigate()
-  console.log(user)
+  const { user } = useAuth();
+  const [userData, setUserData] = useState(null);
 
-  if (!user) {
-  return navigate("/"); // Redireciona para a página de login caso o usuário não esteja autenticado
+  useEffect(() => {
+    const userId = user?.id;
+    
+    if (userId) {
+      const userRef = firestore.collection('users').doc(userId);
+      const unsubscribe = userRef.onSnapshot((doc) => {
+        if (doc.exists) {
+          setUserData(doc.data());
+        } else {
+          setUserData(null);
+        }
+      });
+      return () => unsubscribe();
+    } else {
+      setUserData(null);
+    }
+  }, [user]);
+  console.log(userData)
+  if (!userData) {
+    return <div>Carregando...</div>
   }
-
   return (
     <div className='containerProfile'>
       <NavFreteGratis/>
@@ -30,7 +48,7 @@ const Profile = ({}) => {
           </div>
           <div className="divsProfile">
             <div className="titleProfile">
-              <h1>Olá, {user.name}</h1> <img src={user.photo} alt="" />
+              <h1>Olá, {userData.name}</h1> <img src={userData.photo} alt="" />
             </div>
               <DivProfile/>
           </div>

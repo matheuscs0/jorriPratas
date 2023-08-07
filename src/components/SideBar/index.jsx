@@ -3,11 +3,23 @@ import {AiOutlineClose} from 'react-icons/ai'
 import './styles.css'
 import { Link } from 'react-router-dom';
 import {VscAccount} from 'react-icons/vsc'
+import { useNavigate } from 'react-router-dom';
+import useAuth from '../Hooks/useAuth';
 
 const SideBar = ({active, onLoginClick}) => {
+  const {user, setUser} = useAuth()
+  const navigate = useNavigate();
   const CloseSideBar = () => {
     active(false)
   }
+
+  const handleAccountClick = () => {
+    if (user) {
+      navigate('/profile'); // Redireciona para /profile se o usuário estiver logado
+    } else {
+      onLoginClick(); // Abre o onLoginClick para o usuário logar ou criar uma conta
+    }
+  };
 
   return (
     <div className='ContainerSidebar' sidebar={active}>
@@ -31,7 +43,7 @@ const SideBar = ({active, onLoginClick}) => {
        <li>Brincos</li>
        </Link>
        <Link >
-       <li onClick={onLoginClick}><VscAccount/> Minha Conta</li>
+       <li onClick={handleAccountClick}><VscAccount onClick={handleAccountClick}/> Minha Conta</li>
        </Link>
       </div>
     </div>
