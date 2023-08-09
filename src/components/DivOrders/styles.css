@@ -1,0 +1,93 @@
+.ContainerInfoOrder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+.ContainerInfoOrder h1{
+  display: flex;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.Orders{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  width: 800px;
+  background-color: #f7f7f7;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.13);
+  margin-top: 2rem;
+}
+.infoProfile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid #0000001c;
+  padding: 1rem;
+  width: 100%;
+  gap: 0.3rem;
+}
+.infoProfile h2{
+  display: flex;
+  font-weight: 400;
+}
+.Order{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  gap: 2rem;
+  margin: 1rem;
+  border-bottom: 1px solid #00000038;
+  padding: 1rem;
+}
+.infos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.Order img{
+  display: flex;
+  width: 100px;
+  object-fit: contain;
+}
+.infoImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+.infoOrder{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 5rem;
+}
+.infoTitle{
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  flex-direction: column;
+  width: 40%;
+}
+.infoPrice{
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  flex-direction: column;
+  width: 40%;
+}

@@ -34,7 +34,7 @@ const CarrinhoDeCompras = ({ cartItems, onClose, onRemove }) => {
               <p>
                 <div className="containerP">
                   <div className="Ptotal">Total</div>
-                  <div className="pricePTotal">R$ {calcularTotal().toFixed(2)}</div>
+                  <div className="pricePTotal">{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(calcularTotal())}</div>
                 </div>
               </p>
              <Link to="/resume-compra">Finalizar Compra</Link>

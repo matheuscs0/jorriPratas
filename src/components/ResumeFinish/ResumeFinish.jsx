@@ -45,7 +45,7 @@ const ResumeFinish = ({ cartItems, onRemove, onNextStep, onPreviousStep }) => {
           <tr>
             <td>
               <p>Subtotal</p>
-              <p className='pResume'>R$ {calcularTotal()}</p>
+              <p className='pResume'>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(calcularTotal())}</p>
             </td>
           </tr>
           <tr>
@@ -55,7 +55,7 @@ const ResumeFinish = ({ cartItems, onRemove, onNextStep, onPreviousStep }) => {
             </td>
             <td>
               <h3>Total</h3>
-              <p className='totalResume'>R$ {calcularTotal()}</p>
+              <p className='totalResume'>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(calcularTotal())}</p>
             </td>
           </tr>
         </tbody>

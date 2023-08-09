@@ -13,7 +13,7 @@ const CardCart = ({ item, onRemove }) => {
         <div className="priceTitle">
         <h3>{item.title}</h3>
         <p>Tamanho: {item.size.size}</p>
-        <p>Preço: R$ {item.size.price}</p>
+        <p>Preço: {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.size.price)}</p>
         </div>
         <BiTrash onClick={handleRemoveItem} />
       </div>

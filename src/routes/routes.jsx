@@ -10,13 +10,14 @@ import FinalizarCompra from '../pages/FinalizarCompra';
 import Profile from '../pages/Profile';
 import useAuth from '../components/Hooks/useAuth';
 import Orders from '../pages/UltimosPedidos';
+import ErrorPage from '../pages/ErrorPage';
 
 const RoutesConfig = ({cartItems}) => {
   const { user } = useAuth();
   return (
     <Routes>
-      <Route element={<App />}>
-        <Route path="/" element={<Home />} />
+      <Route element={<App />} errorElement={<ErrorPage/>}>
+        <Route path="/" element={<Home />} errorElement={<ErrorPage/>}/>
         <Route path="product/:id" element={<ProductDetail />} />
         <Route path="/search-results" element={<Search />} />
         <Route path="/products/:type" element={<ProductPage />} />

@@ -1,0 +1,27 @@
+.form, .form-cadastro {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 2px;
+}
+.form-cadastro input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  color: black;
+  border-radius: 5px;
+  border: none;
+  background-color: #f7f7f7;
+}
+.form button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: none;
+  color: rgb(135, 135, 253);
+  font-weight: 700;
+  cursor: pointer;
+}

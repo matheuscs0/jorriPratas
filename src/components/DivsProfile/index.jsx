@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom'
 import './styles.css'
+import Cadastro from '../Cadastro';
 
 const DivProfile = () => {
   return ( 
@@ -14,9 +15,7 @@ const DivProfile = () => {
       <div className="divProfile">
         <div className="titleDiv"><h3>Meu cadastro</h3></div>
         <div className="div">
-          <Link to="">Alterar dados pessoais</Link>
-          <Link to="">Alterar meu e-mail</Link>
-          <Link to="">Alterar minha senha</Link>
+          <Cadastro/>
         </div>
       </div>
     </div>

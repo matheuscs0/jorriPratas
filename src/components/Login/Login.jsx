@@ -96,7 +96,13 @@ const Login = ({ onClose}) => {
     }
   };
   
-  
+  const recoverPassword = () => {
+    firebase.auth().sendPasswordResetEmail(form.email).then(()=> {
+      alert('Email enviado com sucesso')
+    }).catch(error => {
+      alert("Não foi possivel recuperar a senha" + error.message)
+    })
+  }
 
   const handleChange = (event) => {
     console.log('Digitando', event.target.name, event.target.value)
@@ -148,7 +154,7 @@ const Login = ({ onClose}) => {
                     </div>
                     <button type="submit" className="form-submit-btn" onClick={handleSubmit}>Log In</button>
                   </form>
-                  <a className="forgot-password-link link" href="#">Esqueceu a senha?</a>
+                  <a className="forgot-password-link link" onClick={recoverPassword}>Esqueceu a senha?</a>
                   <p className="signup-link">
                     Não tem conta ainda?     <button onClick={handleShowSignUp}>Se cadastre agora</button>
                   </p>

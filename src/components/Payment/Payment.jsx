@@ -82,46 +82,48 @@ export default function Payment({cep, address, city, state, number, complemento,
 
       console.log(response);
       console.log(response.id);
-      if(response.status === 200){
-        localStorage.setItem("paymentId", JSON.stringify({ id : response.id }));
-        setPaymentSuccess(true)
-        firestore.collection('users').doc(userId).update({
+      if (response.status === 200) {
+        const purchaseData = {
+          cep,
+          address,
+          city,
+          state,
+          number, 
+          complemento,
+          itemTitle,
+          itemPrice,
+          totalWithoutSymbols,
+          itemSize,
+          itemId,
+          poster_path
+        };
+    
+        const userRef = firestore.collection('users').doc(userId);
+        const purchasesCollection = userRef.collection('purchases'); // Referência à subcoleção "purchases"
+        await purchasesCollection.add(purchaseData); // Adiciona um novo documento à subcoleção
+    
+        localStorage.setItem("paymentId", JSON.stringify({ id: response.id }));
+        setPaymentSuccess(true);
+        setPaymentInfo({
           nomeCartao,
           cpf,
+          email,
           cep,
-            address,
-            city,
-            state,
-            number,
-            complemento,
-            itemTitle,
-            itemPrice,
-            totalWithoutSymbols, 
-            itemSize, 
-            itemId,
-            poster_path
+          address,
+          city,
+          state,
+          number,
+          complemento,
+          itemTitle,
+          itemPrice,
+          totalWithoutSymbols,
+          itemSize,
+          itemId,
+          poster_path
         });
-        setPaymentInfo({
-        nomeCartao,
-        cpf,
-        email,
-        cep,
-        address,
-        city,
-        state,
-        number, 
-        complemento,
-        itemTitle,
-        itemPrice,
-        totalWithoutSymbols, 
-        itemSize, 
-        itemId,
-        poster_path
-        })
       }
-      }
-     catch (error) {
-      alert('Pagamento recusado')
+    } catch (error) {
+      alert('Pagamento recusado');
     }
     function sendEmail(){
       const itemTitle = cartItems.map((item) => item.title);
@@ -170,7 +172,7 @@ export default function Payment({cep, address, city, state, number, complemento,
         <CheckCircleRoundedIcon size="large" className='svg-Icon'/>
         <h2>Pagamento realizado com sucesso!</h2>
         <p>Olá, seu pagamento foi realizado com sucesso e logo sera entregue!</p>
-        <p> Valor: R$ {total}</p>
+        <p> Valor: R$ {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(total)}</p>
         <Link to='/'>Voltar</Link>
       </div>
     ) : (
