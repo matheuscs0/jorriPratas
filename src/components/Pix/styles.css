@@ -1,0 +1,42 @@
+.creditCardContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+}
+.input_container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.input_container input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #81818121;
+  padding: 0.5rem 2rem;
+  width: 400px;
+  outline-style: none;
+}
+.input_label {
+  font-size: 15px;
+  color: #000000;
+  font-weight: 600;
+}
+.paymentConfirmed img{
+  max-width: 100%;
+  width: 100%;
+}
+.copiaEcola{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  max-width: 500px;
+}

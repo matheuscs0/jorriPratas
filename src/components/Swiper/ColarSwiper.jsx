@@ -34,74 +34,48 @@ const ColarSwiper = () => {
   
   const products = [
     {
-      id: "5659",
-      poster_path: "../public/imgs/Brincos/brincoCoracao.jpeg",
-      title: "BRINCO PRATA CORAÇÃO",
+      id: "7397",
+      poster_path: "../public/imgs/PontoDeLuz/poster_pontoLuz.jpg",
+      foto_about1: "../public/imgs/PontoDeLuz/colar_pontoLuz.jpg",
+      title: "COLAR DE PRATA PONTO DE LUZ",
       disponivel: "sim",
-      price: "39.99",
+      price: "59.99",
       sizes: [
-        { size: "Unico", price: "39.99" },
+        { size: "Padrão", price: "59.99" },
       ],
     },
     {
-      id: "5908",
-      poster_path: "../public/imgs/Brincos/brincoFlor.jpeg",
-      title: "BRINCO PRATA FLOR",
+      "id": "P300440",
+      "poster_path": "../public/imgs/Coração/poster_pulseiraCoracao.jpg",
+      "foto_about1": "../public/imgs/Coração/pulseira_coracao.jpeg",
+      "title": "PULSEIRA DE PRATA ELO CORAÇÃO",
+      "disponivel": "sim",
+      "price": "54.90",
+      "sizes": [
+        { "size": "Padrão", "price": "54.90" }
+      ]
+    },
+    {
+      id: "T30031",
+      poster_path: "../public/imgs/Singapura/poster_singapura.jpg",
+      foto_about1: "../public/imgs/Singapura/tornozeleira_singapura.png",
+      title: "TORNOZELEIRA DE PRATA SINGAPURA",
       disponivel: "sim",
-      price: "39.99",
+      price: "77.90",
       sizes: [
-        { size: "Unico", price: "39.99" },
+        { size: "Padrão", price: " 77.90" },
       ],
     },
     {
-      id: "6839",
-      poster_path: "../public/imgs/Brincos/brincoCobra.jpeg",
-      title: "BRINCO PRATA COBRA",
-      disponivel: "sim",
-      price: "39.99",
-      sizes: [
-        { size: "Unico", price: "39.99" },
-      ],
-    },
-    {
-      id: "6815",
-      poster_path: "../public/imgs/Brincos/brincoTrevo.jpeg",
-      title: "BRINCO PRATA TREVO",
-      disponivel: "sim",
-      price: "39.99",
-      sizes: [
-        { size: "Unico", price: "39.99" },
-      ],
-    },
-    {
-      id: "5656",
-      poster_path: "../public/imgs/Brincos/brincoConcha.jpeg",
-      title: "BRINCO PRATA CONCHA",
-      disponivel: "sim",
-      price: "39.99",
-      sizes: [
-        { size: "Unico", price: "39.99" },
-      ],
-    },
-    {
-      id: "4069",
-      poster_path: '../public/imgs/Brincos/brincoMeiaLua.jpeg',
-      title: "BRINCO PRATA MEIA LUA",
-      disponivel: "sim",
-      price: "39.99",
-      sizes: [
-        { size: "Unico", price: "39.99" },
-      ],
-    },
-    {
-      id: "2034",
-      poster_path: "../public/imgs/Brincos/brincoPage.jpeg",
-      title: "BRINCO PRATA TREVO",
-      disponivel: "sim",
-      price: "39.99",
-      sizes: [
-        { size: "Unico", price: "29.99" },
-      ],
+      "id": "4906",
+      "poster_path": "../public/imgs/Aneis/anel7.jpeg",
+      "title": "ANEL PRATA SOLITÁRIO",
+      "disponivel": "sim",
+      "price": "119.99",
+      "sizes": [
+        { "size": "12", "price": " 119.99" },
+        { "size": "15", "price": " 119.99" }
+      ]
     },
     {
       id: "4086",

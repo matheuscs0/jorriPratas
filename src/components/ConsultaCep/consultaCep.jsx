@@ -153,9 +153,13 @@ export default function ConsultaCep({ onSubmit, onNextStep }) {
               variant="standard"
             />
           </Grid>
-          <Button variant="contained" onClick={handleNext} size="small" endIcon={<SendIcon />}>
-            Próximo
-          </Button>
+          <Grid>
+            <Button variant="contained" onClick={handleNext} size="small" endIcon={<SendIcon />}
+              style={{ marginLeft: "10px", marginTop: "2rem" }}
+            >
+              Próximo
+            </Button>
+          </Grid>
         </Grid>
       </Grid>
     </React.Fragment>

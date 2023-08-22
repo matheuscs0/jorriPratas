@@ -23,10 +23,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1500px;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
+  flex-direction: column;
 }
 .navs{
   margin-bottom: 5rem;
 }
+

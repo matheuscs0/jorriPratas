@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import Nav from '../components/Nav/Nav'
-import NavFreteGratis from '../components/navFreteGratis/navFreteGratis'
+import React, { useState, useEffect } from "react";
+import Nav from "../components/Nav/Nav";
+import NavFreteGratis from "../components/navFreteGratis/navFreteGratis";
 import Cookies from "js-cookie";
 import ResumeFinish from "../components/ResumeFinish/ResumeFinish";
-import ConsultaCep from  '../components/ConsultaCep/consultaCep'
-import Payment from '../components/Payment/Payment';
-import { ProgressBar, Step } from 'react-step-progress-bar';
-import 'react-step-progress-bar/styles.css';
-import './css/ProgressBar.css'
-import './css/FinalizarCompra.css';
-import {SiVerizon} from 'react-icons/si'
-import { PaymentProvider } from '../components/Context/PaymentContext';
-import useAuth from '../components/Hooks/useAuth';
+import ConsultaCep from "../components/ConsultaCep/consultaCep";
+import Payment from "../components/Payment/Payment";
+import { ProgressBar, Step } from "react-step-progress-bar";
+import "react-step-progress-bar/styles.css";
+import "./css/ProgressBar.css";
+import "./css/FinalizarCompra.css";
+import { SiVerizon } from "react-icons/si";
+import { PaymentProvider } from "../components/Context/PaymentContext";
+import useAuth from "../components/Hooks/useAuth";
 
 const FinalizarCompra = ({ onSubmit, onRemove }) => {
   const { user, setUser } = useAuth();
-  console.log(user)
+  console.log(user);
 
   const [cartItems, setCartItems] = useState([]);
   const [addressInfo, setAddressInfo] = useState();
@@ -43,7 +43,7 @@ const FinalizarCompra = ({ onSubmit, onRemove }) => {
   };
 
   useEffect(() => {
-    const storedCartItems = Cookies.get('cartItems');
+    const storedCartItems = Cookies.get("cartItems");
     if (storedCartItems) {
       const parsedCartItems = JSON.parse(storedCartItems);
       if (parsedCartItems.length > 0) {
@@ -53,7 +53,7 @@ const FinalizarCompra = ({ onSubmit, onRemove }) => {
   }, []);
 
   useEffect(() => {
-    Cookies.set('cartItems', JSON.stringify(cartItems), { expires: 7 });
+    Cookies.set("cartItems", JSON.stringify(cartItems), { expires: 7 });
   }, [cartItems]);
 
   const handleNextStep = () => {
@@ -64,7 +64,6 @@ const FinalizarCompra = ({ onSubmit, onRemove }) => {
       return updatedCompleted;
     });
   };
-  
 
   const handlePreviousStep = () => {
     setCurrentStep((prevStep) => prevStep - 1);
@@ -77,78 +76,88 @@ const FinalizarCompra = ({ onSubmit, onRemove }) => {
 
   return (
     <PaymentProvider>
-    <div>
-      <div className='navs'>
-        <NavFreteGratis />
-        <Nav />
-      </div>
-      <div className="progressBarContainer">
-  <ProgressBar percent={(currentStep / 2) * 100}>
-    <Step>
-      {({ accomplished }) => (
-        <div className={`step-indicator ${accomplished || completedSteps[0] ? 'accomplished' : ''}`}>
-          {completedSteps[0] ? <SiVerizon/> : '1'}
+      <div>
+        <div className="navs">
+          <NavFreteGratis />
+          <Nav />
         </div>
-      )}
-    </Step>
-    <Step>
-      {({ accomplished }) => (
-        <div className={`step-indicator ${accomplished || completedSteps[1] ? 'accomplished' : ''}`}>
-          {completedSteps[1] ? <SiVerizon/> : '2'}
+        <div className="progressBarContainer">
+          <ProgressBar percent={(currentStep / 2) * 100}>
+            <Step>
+              {({ accomplished }) => (
+                <div
+                  className={`step-indicator ${
+                    accomplished || completedSteps[0] ? "accomplished" : ""
+                  }`}
+                >
+                  {completedSteps[0] ? <SiVerizon /> : "1"}
+                </div>
+              )}
+            </Step>
+            <Step>
+              {({ accomplished }) => (
+                <div
+                  className={`step-indicator ${
+                    accomplished || completedSteps[1] ? "accomplished" : ""
+                  }`}
+                >
+                  {completedSteps[1] ? <SiVerizon /> : "2"}
+                </div>
+              )}
+            </Step>
+            <Step>
+              {({ accomplished }) => (
+                <div
+                  className={`step-indicator ${
+                    accomplished || completedSteps[2] ? "accomplished" : ""
+                  }`}
+                >
+                  {completedSteps[2] ? <SiVerizon /> : "3"}
+                </div>
+              )}
+            </Step>
+          </ProgressBar>
         </div>
-      )}
-    </Step>
-    <Step>
-      {({ accomplished }) => (
-        <div className={`step-indicator ${accomplished || completedSteps[2] ? 'accomplished' : ''}`}>
-          {completedSteps[2] ? <SiVerizon/> : '3'}
-        </div>
-      )}
-    </Step>
-  </ProgressBar>
-</div>
 
-      <div className="containerFinish">
-        {currentStep === 0 && (
-          <div className="left">
-            <ConsultaCep onSubmit={handleAddressChange} onNextStep={handleNextStep} />
-          </div>
-        )}
-        {currentStep === 1 && (
-          <div className="right">
-           <ResumeFinish
-            cartItems={cartItems}
-            onRemove={onRemove}
-            onNextStep={handleNextStep}
-            onPreviousStep={handlePreviousStep} // Certifique-se de passar a função aqui
-          />
+        <div className="containerFinish">
+          {currentStep === 0 && (
+            <div className="left">
+              <ConsultaCep
+                onSubmit={handleAddressChange}
+                onNextStep={handleNextStep}
+              />
+            </div>
+          )}
+          {currentStep === 1 && (
+            <div className="right">
+              <ResumeFinish
+                cartItems={cartItems}
+                onRemove={onRemove}
+                onNextStep={handleNextStep}
+                onPreviousStep={handlePreviousStep} // Certifique-se de passar a função aqui
+              />
+            </div>
+          )}
+        </div>
+        {currentStep === 2 && (
+          <div className="payment">
+            <Payment
+              cartItems={cartItems}
+              cep={addressInfo && addressInfo.cep}
+              address={addressInfo && addressInfo.address}
+              city={addressInfo && addressInfo.city}
+              state={addressInfo && addressInfo.state}
+              number={addressInfo && addressInfo.number}
+              complemento={addressInfo && addressInfo.complemento}
+              onSubmit={onSubmit}
+              total={calcularTotal()}
+              onPreviousStep={handlePreviousStep}
+            />
           </div>
         )}
       </div>
-      {currentStep === 2 && (
-        <div className="payment">
-          <Payment
-            cartItems={cartItems}
-            cep={addressInfo && addressInfo.cep}
-            address={addressInfo && addressInfo.address}
-            city={addressInfo && addressInfo.city}
-            state={addressInfo && addressInfo.state}
-            number={addressInfo && addressInfo.number}
-            complemento={addressInfo && addressInfo.complemento}
-            onSubmit={onSubmit}
-            total={calcularTotal()}
-            onPreviousStep={handlePreviousStep}
-          />
-        </div>
-      )}
-    </div>
     </PaymentProvider>
   );
 };
 
 export default FinalizarCompra;
-
-
-
-
-
