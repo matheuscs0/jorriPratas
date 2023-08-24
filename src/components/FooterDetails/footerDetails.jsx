@@ -17,7 +17,7 @@ const FooterDetails = () => {
        <div className="footerCard">
         <div><GiReturnArrow/></div>
         <div>
-          <h3>TROCA</h3>
+          <h3>GARANTIA</h3>
           <p>Aceitaremos a troca dentro do prazo de 7 dias corridos, desde que o mesmo não viole a embalagem.</p>
         </div>
        </div>

@@ -27,8 +27,8 @@ const FooterPayment = () => {
     <div className='ContainerFooterPayment'>
       <div className="containerContact">
           <h3>Contato</h3>
-          <p><MdEmail/> jorripratas2023@gmail.com</p>
-          <p><BsFillTelephoneFill/> +55 11 99995-8883</p>
+          <p><MdEmail/> jorripratas.contato@gmail.com</p>
+          <p><BsFillTelephoneFill/> +55 11 96108-3809</p>
       </div>
       <div className='PaymentContainer'>
         <div className='methodsTitle'>
